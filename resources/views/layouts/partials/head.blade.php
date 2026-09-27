@@ -26,6 +26,7 @@
 <link href="{{ asset('assets/css/core/kiel-scrollbar.css') }}" rel="stylesheet"/>
 @if(($page ?? '') === 'accueil')
 <link href="{{ asset('assets/css/core/kiel-hero-orbit-logo.css') }}" rel="stylesheet"/>
+<link href="{{ asset('assets/css/core/kiel-baobab-hub-title.css') }}" rel="stylesheet"/>
 <style>@layer base{html,body{margin:0;padding:0;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}h1,h2{font-family:"Playfair Display",serif;font-weight:700;letter-spacing:-0.02em;}#hero-section h1{color:inherit;}}</style>
 @endif
 @include('layouts.partials.cms-integrations-head')

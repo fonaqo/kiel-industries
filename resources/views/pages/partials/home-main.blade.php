@@ -300,7 +300,7 @@
         <span class="kiel-eyebrow">KIEL INDUSTRIES · filière baobab</span>
       </div>
       <h2 class="kiel-baobab-hub__title" id="baobab-arbre-vie-title">
-        LE BA<span class="kiel-baobab-hub__title-o">@include('partials.kiel-logo-eyebrow', ['class' => 'kiel-baobab-hub__title-logo'])</span>BAB
+        LE BA<span class="kiel-baobab-hub__title-o">O</span>BAB
       </h2>
       <p class="kiel-baobab-hub__subtitle">L’arbre de vie</p>
       <p class="kiel-baobab-hub__intro">Symbole de force et de résilience, le baobab est au cœur de la vie, des cultures et de l’avenir durable que KIEL INDUSTRIES porte depuis Parakou.</p>

@@ -1,0 +1,15 @@
+/**
+ * Section « LE BAOBAB » — lettre O (pas de logo dans le titre).
+ */
+#baobab-arbre-vie .kiel-baobab-hub__title-o {
+  position: relative;
+  display: inline;
+  color: #318135;
+  vertical-align: baseline;
+  line-height: inherit;
+  font: inherit;
+}
+
+#baobab-arbre-vie .kiel-baobab-hub__title-o img {
+  display: none !important;
+}
