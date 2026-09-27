@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 320" aria-hidden="true">
+  <defs>
+    <linearGradient id="baobab-trunk" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1a0006"/>
+      <stop offset="45%" stop-color="#2c000a"/>
+      <stop offset="100%" stop-color="#4a101d"/>
+    </linearGradient>
+    <radialGradient id="baobab-canopy" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#74313d" stop-opacity=".25"/>
+      <stop offset="100%" stop-color="#2c000a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="120" cy="302" fill="#2c000a" opacity=".45" rx="72" ry="11"/>
+  <path d="M92 302 L82 148 Q78 112 92 96 Q120 78 148 96 Q162 112 158 148 L148 302 Z" fill="url(#baobab-trunk)"/>
+  <ellipse cx="120" cy="118" fill="url(#baobab-canopy)" rx="58" ry="18"/>
+  <g fill="none" stroke="#2c000a" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M120 92 V38" stroke-width="5"/>
+    <path d="M120 42 C68 38 34 66 28 98" stroke-width="4.5"/>
+    <path d="M120 42 C172 38 206 66 212 98" stroke-width="4.5"/>
+    <path d="M120 54 C88 58 62 78 52 102" stroke-width="4"/>
+    <path d="M120 54 C152 58 178 78 188 102" stroke-width="4"/>
+  </g>
+</svg>

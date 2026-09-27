@@ -1,0 +1,303 @@
+/* Listes commandes — compte client & admin */
+.kiel-orders-panel {
+  border-radius: 1rem;
+  background: #fff;
+  border: 1px solid rgba(216, 193, 195, 0.45);
+  box-shadow: 0 12px 32px rgba(44, 0, 10, 0.05);
+  overflow: hidden;
+}
+
+.kiel-orders-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.kiel-orders-table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.kiel-orders-table thead th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #fff;
+  background: #2c000a;
+  border-bottom: 2px solid #74313d;
+  white-space: nowrap;
+}
+
+.kiel-orders-table tbody td {
+  padding: 0.85rem 1rem;
+  vertical-align: middle;
+  border-bottom: 1px solid rgba(216, 193, 195, 0.35);
+  color: #334155;
+}
+
+.kiel-orders-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.kiel-orders-table tbody tr:hover td {
+  background: #fff8f6;
+}
+
+.kiel-orders-table__ref a {
+  font-weight: 800;
+  color: #2c000a;
+  text-decoration: none;
+  font-family: ui-monospace, monospace;
+  font-size: 13px;
+}
+
+.kiel-orders-table__ref a:hover {
+  color: #74313d;
+  text-decoration: underline;
+}
+
+.kiel-orders-table__client {
+  min-width: 10rem;
+}
+
+.kiel-orders-table__client-name {
+  display: block;
+  font-weight: 600;
+  color: #2c000a;
+}
+
+.kiel-orders-table__client-email {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.kiel-orders-table__date time {
+  display: block;
+  font-weight: 600;
+  color: #2c000a;
+}
+
+.kiel-orders-table__time {
+  display: block;
+  margin-top: 0.1rem;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.kiel-orders-table__col-num {
+  text-align: center;
+  font-weight: 700;
+  color: #2c000a;
+}
+
+.kiel-orders-table__col-amount {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.kiel-orders-table__col-amount strong {
+  color: #318135;
+  font-weight: 800;
+}
+
+.kiel-orders-table__status .kiel-order-status {
+  white-space: nowrap;
+}
+
+.kiel-orders-table__col-action {
+  text-align: right;
+  width: 1%;
+}
+
+.kiel-orders-table__link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff !important;
+  background: #318135;
+  border: 1px solid #318135;
+}
+
+.kiel-orders-table__link:hover {
+  background: #2a6b2e;
+  border-color: #2a6b2e;
+  color: #fff !important;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 767px) {
+  .kiel-orders-table {
+    min-width: 560px;
+  }
+}
+
+/* Détail commande — aligné CMS admin */
+.kiel-admin-order-detail {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.kiel-admin-order-detail__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.kiel-admin-order-detail__meta {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 14px;
+  font-weight: 400;
+  color: #64748b;
+}
+
+.kiel-admin-order-detail__meta strong {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2c000a;
+}
+
+.kiel-admin-order-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .kiel-admin-order-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.kiel-admin-order-card {
+  padding: 1.15rem 1.25rem;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+}
+
+.kiel-admin-order-card h3 {
+  margin: 0 0 0.65rem;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2c000a;
+}
+
+.kiel-admin-order-card p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #334155;
+}
+
+.kiel-admin-order-card .kiel-cms-btn {
+  margin-top: 0.35rem;
+}
+
+.kiel-admin-order-items {
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.kiel-admin-order-items h3 {
+  margin: 0;
+  padding: 1rem 1.2rem;
+  font-size: 15px;
+  font-weight: 600;
+  color: #2c000a;
+  border-bottom: 1px solid #eef2f6;
+  background: #f8fafc;
+}
+
+.kiel-admin-order-item {
+  display: grid;
+  grid-template-columns: 56px 1fr auto;
+  gap: 0.85rem;
+  align-items: center;
+  padding: 0.85rem 1.2rem;
+  border-bottom: 1px solid #eef2f6;
+}
+
+.kiel-admin-order-item:last-of-type {
+  border-bottom: none;
+}
+
+.kiel-admin-order-item img {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  object-fit: cover;
+  background: #f1f5f9;
+}
+
+.kiel-admin-order-item__name {
+  margin: 0;
+  font-weight: 600;
+  color: #0f172a;
+  font-size: 14px;
+}
+
+.kiel-admin-order-item__sub {
+  margin: 0.2rem 0 0;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.kiel-admin-order-item__price {
+  text-align: right;
+  font-weight: 700;
+  color: #2c000a;
+  white-space: nowrap;
+}
+
+.kiel-admin-order-totals {
+  padding: 1rem 1.2rem;
+  border-top: 1px solid #eef2f6;
+  background: #f8fafc;
+}
+
+.kiel-admin-order-totals p {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 0.35rem;
+  font-size: 14px;
+}
+
+.kiel-admin-order-totals p:last-child {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e2e8f0;
+  font-weight: 700;
+  font-size: 15px;
+}

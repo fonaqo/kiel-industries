@@ -1,0 +1,158 @@
+.kiel-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  line-height: 0;
+  flex-shrink: 0;
+}
+
+.kiel-icon svg {
+  display: block;
+  width: 1em;
+  height: 1em;
+}
+
+.kiel-icon--16 {
+  font-size: 16px;
+}
+
+.kiel-icon--18 {
+  font-size: 18px;
+}
+
+.kiel-icon--20 {
+  font-size: 20px;
+}
+
+.kiel-icon--22 {
+  font-size: 22px;
+}
+
+.kiel-icon--26 {
+  font-size: 26px;
+}
+
+.kiel-category-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0.65rem;
+  box-sizing: border-box;
+  background: linear-gradient(145deg, #f4faf4 0%, #fff 100%);
+}
+
+.kiel-category-icon svg {
+  width: 100%;
+  max-width: 52px;
+  height: auto;
+}
+
+.kiel-cat-card__thumb--svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  object-fit: unset;
+  background: #f8faf8;
+}
+
+.kiel-cat-card__thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  aspect-ratio: 1;
+  border-radius: inherit;
+}
+
+.kiel-drawer-nav-sublink {
+  padding-left: 1.25rem !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #6b5c5e !important;
+}
+
+.kiel-nav-mega-icon {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f4faf4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kiel-nav-mega-icon .kiel-category-icon {
+  padding: 0.5rem;
+}
+
+.kiel-nav-mega-icon .kiel-category-icon svg {
+  max-width: 40px;
+}
+
+.kiel-nav-mega-icon__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.kiel-service-strip__icon .kiel-icon svg {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+.kiel-contact-v3-chip__icon .kiel-icon svg {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+.kiel-logo-filigrane {
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Surtitre : marque baobab (voir kiel-logos.css) */
+.kiel-section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.65rem;
+  max-width: 100%;
+}
+
+.kiel-section-eyebrow .kiel-eyebrow {
+  line-height: 1.15;
+  padding: 0;
+  margin: 0;
+  transform: translateY(0.05em);
+}
+
+.kiel-section-eyebrow.justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+.kiel-logo-filigrane--watermark {
+  width: min(380px, 55vw);
+  max-height: 420px;
+  opacity: 0.07;
+  mix-blend-mode: multiply;
+}
+
+.kiel-logo-filigrane--watermark.baobab-sil--wine {
+  opacity: 0.09;
+  filter: brightness(0) saturate(100%) invert(7%) sepia(28%) saturate(4500%) hue-rotate(314deg) brightness(95%) contrast(105%);
+  mix-blend-mode: multiply;
+}
+
+.kiel-logo-filigrane--watermark.baobab-sil--mono {
+  opacity: 0.06;
+  filter: grayscale(1) brightness(1.05);
+}

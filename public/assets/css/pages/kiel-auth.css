@@ -1,0 +1,187 @@
+.kiel-auth-page {
+  padding: 0 0 3.5rem;
+  background: #fff;
+}
+.kiel-auth-page .kiel-subhero--plain {
+  padding-bottom: 1.25rem;
+}
+.kiel-auth-simple {
+  max-width: 26rem;
+  margin: 0 auto;
+  padding-top: 0.5rem;
+}
+.kiel-auth-simple__title {
+  margin: 1.5rem 0 0.35rem;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.65rem, 3vw, 2rem);
+  color: #2c000a;
+}
+.kiel-auth-simple__lead {
+  margin: 0 0 1.35rem;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #534344;
+}
+.kiel-auth-google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(216, 193, 195, 0.65);
+  background: #fff;
+  color: #2c000a;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.kiel-auth-google:hover {
+  border-color: rgba(44, 0, 10, 0.25);
+  box-shadow: 0 6px 18px rgba(44, 0, 10, 0.06);
+}
+.kiel-auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1.1rem 0;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9a8587;
+}
+.kiel-auth-divider::before,
+.kiel-auth-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(216, 193, 195, 0.55);
+}
+.kiel-auth-form label {
+  display: block;
+  margin-bottom: 0.85rem;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #534344;
+}
+.kiel-auth-form input[type="text"],
+.kiel-auth-form input[type="email"],
+.kiel-auth-form input[type="password"],
+.kiel-auth-form input[type="tel"] {
+  display: block;
+  width: 100%;
+  margin-top: 0.35rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(216, 193, 195, 0.55);
+  background: #fff8f6;
+  padding: 0.75rem 1rem;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+.kiel-auth-password {
+  display: block;
+  position: relative;
+  margin-top: 0.35rem;
+}
+.kiel-auth-password input {
+  margin-top: 0 !important;
+  padding-right: 2.75rem;
+}
+.kiel-auth-password__toggle {
+  position: absolute;
+  right: 0.35rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: transparent;
+  color: #74313d;
+  cursor: pointer;
+}
+.kiel-auth-password__toggle .material-symbols-outlined {
+  font-size: 20px;
+}
+.kiel-auth-password__toggle:hover {
+  background: rgba(44, 0, 10, 0.06);
+}
+.kiel-auth-forgot {
+  margin: -0.35rem 0 0.85rem;
+  text-align: right;
+  font-size: 13px;
+}
+.kiel-auth-forgot a {
+  color: #74313d;
+  font-weight: 700;
+  text-decoration: none;
+}
+.kiel-auth-forgot a:hover {
+  text-decoration: underline;
+}
+.kiel-auth-status {
+  margin: 0 0 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  background: #e8f5e9;
+  color: #1b5e20;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.kiel-auth-form input:focus {
+  outline: none;
+  border-color: #318135;
+  box-shadow: 0 0 0 3px rgba(184, 230, 186, 0.45);
+}
+.kiel-auth-form__remember {
+  display: flex !important;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+}
+.kiel-auth-form__remember input {
+  width: auto;
+  margin: 0;
+}
+.kiel-auth-form__submit {
+  width: 100%;
+  justify-content: center;
+  background: #2c000a;
+  border-radius: 9999px;
+  margin-top: 0.25rem;
+}
+.kiel-auth-form__submit:hover {
+  background: #74313d;
+}
+.kiel-auth-errors {
+  margin: 0 0 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  background: #ffebee;
+  color: #b71c1c;
+  font-size: 13px;
+  line-height: 1.5;
+  list-style: none;
+}
+.kiel-auth-footer {
+  margin-top: 1.15rem;
+  text-align: center;
+  font-size: 14px;
+  color: #534344;
+}
+.kiel-auth-footer a {
+  color: #74313d;
+  font-weight: 800;
+  text-decoration: none;
+}

@@ -1,0 +1,663 @@
+/* À propos — sections premium, visuelles, éco */
+.kiel-about-v2 {
+  overflow-x: clip;
+}
+
+.kiel-about-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+.kiel-about-reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.kiel-about-hero-band {
+  position: relative;
+  padding: 3.5rem 0;
+  background: #fff;
+  overflow: hidden;
+}
+
+.kiel-about-mosaic {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+@media (min-width: 768px) {
+  .kiel-about-mosaic {
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(140px, 18vw);
+    gap: 0.85rem;
+  }
+  .kiel-about-mosaic__a { grid-column: 1 / 8; grid-row: span 2; }
+  .kiel-about-mosaic__b { grid-column: 8 / 13; }
+  .kiel-about-mosaic__c { grid-column: 8 / 11; }
+  .kiel-about-mosaic__d { grid-column: 11 / 13; }
+  .kiel-about-mosaic__e { grid-column: 1 / 5; }
+  .kiel-about-mosaic__f { grid-column: 5 / 8; }
+}
+.kiel-about-mosaic figure {
+  margin: 0;
+  position: relative;
+  border-radius: 1.15rem;
+  overflow: hidden;
+  min-height: 11rem;
+  box-shadow: 0 16px 40px rgba(44, 0, 10, 0.1);
+}
+.kiel-about-mosaic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 11rem;
+  transition: transform 0.7s ease;
+}
+.kiel-about-mosaic figure:hover img {
+  transform: scale(1.04);
+}
+.kiel-about-mosaic figcaption {
+  position: absolute;
+  left: 0.85rem;
+  bottom: 0.75rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.92);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #1e4d22;
+}
+
+.kiel-about-mission-premium {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 992px) {
+  .kiel-about-mission-premium {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.kiel-about-mission-premium article {
+  position: relative;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #fff;
+  box-shadow: 0 18px 44px rgba(44, 0, 10, 0.12);
+}
+.kiel-about-mission-premium article::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(44, 0, 10, 0.15) 0%, rgba(44, 0, 10, 0.88) 100%);
+  z-index: 1;
+}
+.kiel-about-mission-premium img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+.kiel-about-mission-premium article:hover img {
+  transform: scale(1.06);
+}
+.kiel-about-mission-premium__body {
+  position: relative;
+  z-index: 2;
+  padding: 1.35rem 1.2rem;
+}
+.kiel-about-mission-premium__body .material-symbols-outlined {
+  font-size: 1.65rem;
+  color: #b8e6ba;
+  margin-bottom: 0.35rem;
+}
+.kiel-about-mission-premium h3 {
+  margin: 0 0 0.4rem;
+  font-family: "Playfair Display", serif;
+  font-size: 1.25rem;
+}
+.kiel-about-mission-premium p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.kiel-about-timeline-premium {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+@media (min-width: 992px) {
+  .kiel-about-timeline-premium {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.85rem;
+  }
+}
+.kiel-about-timeline-card {
+  position: relative;
+  background: #fff;
+  border-radius: 1.15rem;
+  overflow: hidden;
+  border: 1px solid rgba(216, 193, 195, 0.4);
+  box-shadow: 0 12px 32px rgba(44, 0, 10, 0.06);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.kiel-about-timeline-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 44px rgba(49, 129, 53, 0.15);
+}
+.kiel-about-timeline-card__img {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+.kiel-about-timeline-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.kiel-about-timeline-card__body {
+  padding: 1rem 1rem 1.15rem;
+}
+.kiel-about-timeline-card time {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #318135;
+  margin-bottom: 0.35rem;
+}
+.kiel-about-timeline-card h3 {
+  margin: 0 0 0.35rem;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #2c000a;
+  line-height: 1.3;
+}
+.kiel-about-timeline-card p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #534344;
+}
+
+.kiel-about-director-premium {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 420px;
+  box-shadow: 0 24px 56px rgba(44, 0, 10, 0.14);
+}
+@media (min-width: 992px) {
+  .kiel-about-director-premium {
+    grid-template-columns: 1.1fr 1fr;
+    min-height: 380px;
+  }
+}
+.kiel-about-director-premium__visual {
+  position: relative;
+  min-height: 260px;
+}
+.kiel-about-director-premium__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 260px;
+}
+.kiel-about-director-premium__visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(44, 0, 10, 0.35));
+}
+.kiel-about-director-premium__panel {
+  background: linear-gradient(145deg, #2c000a, #74313d);
+  color: #fff;
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.kiel-about-director-premium__panel blockquote {
+  margin: 0.75rem 0 0;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  line-height: 1.6;
+  font-style: italic;
+}
+.kiel-about-director-premium__panel cite {
+  margin-top: 1rem;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffdea4;
+  font-style: normal;
+}
+
+.kiel-about-team-v3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.15rem;
+}
+@media (min-width: 640px) {
+  .kiel-about-team-v3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1100px) {
+  .kiel-about-team-v3 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.kiel-about-team-v3 article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0.5rem 0.75rem 1rem;
+  border-radius: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+.kiel-about-team-v3__photo {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 9999px;
+  object-fit: cover;
+  border: 4px solid #b8e6ba;
+  box-shadow: 0 8px 24px rgba(49, 129, 53, 0.2);
+  margin-bottom: 0.85rem;
+}
+.kiel-about-team-v3__badge {
+  display: inline-block;
+  margin-bottom: 0.45rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 9999px;
+  background: #cce8cd;
+  color: #1e4d22;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.kiel-about-team-v3__name {
+  margin: 0 0 0.35rem;
+  font-family: "Playfair Display", serif;
+  font-size: 1.05rem;
+  color: #2c000a;
+  line-height: 1.25;
+}
+.kiel-about-team-v3__firstname,
+.kiel-about-team-v3__lastname {
+  display: inline;
+}
+.kiel-about-team-v3__role {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #534344;
+  font-weight: 600;
+}
+
+/* Mot de la direction — v5 */
+.kiel-director-v5 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border-radius: 1.35rem;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(216, 193, 195, 0.4);
+  box-shadow: 0 20px 48px rgba(44, 0, 10, 0.08);
+}
+@media (min-width: 992px) {
+  .kiel-director-v5 {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  }
+}
+.kiel-director-v5__visual {
+  position: relative;
+  min-height: 280px;
+}
+.kiel-director-v5__visual img {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  object-fit: cover;
+}
+.kiel-director-v5__visual-cap {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.92);
+  color: #74313d;
+  box-shadow: 0 8px 24px rgba(44, 0, 10, 0.12);
+}
+.kiel-director-v5__panel {
+  padding: 1.75rem 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (min-width: 992px) {
+  .kiel-director-v5__panel {
+    padding: 2.25rem 2.5rem;
+  }
+}
+.kiel-director-v5__eyebrow {
+  margin: 0 0 0.35rem;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #318135;
+}
+.kiel-director-v5__title {
+  margin: 0 0 1rem;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.35rem, 2.5vw, 1.85rem);
+  line-height: 1.15;
+  color: #2c000a;
+}
+.kiel-director-v5__quote {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.kiel-director-v5__quote p {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  font-style: italic;
+  line-height: 1.6;
+  color: #534344;
+}
+.kiel-director-v5__author {
+  margin-top: 1.15rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(216, 193, 195, 0.45);
+}
+.kiel-director-v5__name {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 800;
+  color: #2c000a;
+}
+.kiel-director-v5__role {
+  margin: 0.25rem 0 0;
+  font-size: 12px;
+  color: #74313d;
+  font-weight: 600;
+}
+.kiel-director-v5__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.15rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.kiel-director-v5__chips li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 9999px;
+  background: #e8f5e9;
+  font-size: 11px;
+  font-weight: 700;
+  color: #1e4d22;
+}
+.kiel-director-v5__chips .material-symbols-outlined {
+  font-size: 16px;
+}
+.kiel-director-v5__cta {
+  margin-top: 1.25rem;
+  align-self: flex-start;
+}
+
+.kiel-about-join {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  border-radius: 1.5rem;
+  background: linear-gradient(125deg, #2c000a 0%, #74313d 48%, #1e4d22 100%);
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+@media (min-width: 992px) {
+  .kiel-about-join {
+    grid-template-columns: 1.1fr 0.9fr;
+    padding: 2.5rem 2.25rem;
+  }
+}
+.kiel-about-join::after {
+  content: "";
+  position: absolute;
+  right: -8%;
+  bottom: -25%;
+  width: 45%;
+  height: 90%;
+  background: url("../../img/filigrane/baobab-leaves-deco.svg") no-repeat center/contain;
+  opacity: 0.15;
+  pointer-events: none;
+}
+.kiel-about-join__copy {
+  position: relative;
+  z-index: 1;
+}
+.kiel-about-join__eyebrow {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #b8e6ba;
+  margin-bottom: 0.5rem;
+}
+.kiel-about-join h2 {
+  margin: 0 0 0.65rem;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.15;
+}
+.kiel-about-join p {
+  margin: 0 0 1.15rem;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+.kiel-about-join__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+.kiel-about-join__actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.75rem 1.2rem;
+  border-radius: 9999px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.kiel-about-join__actions .is-light {
+  background: #fff;
+  color: #2c000a;
+}
+.kiel-about-join__actions .is-green {
+  background: #318135;
+  color: #fff;
+}
+.kiel-about-join__visual {
+  position: relative;
+  z-index: 1;
+  border-radius: 1.15rem;
+  overflow: hidden;
+  min-height: 200px;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.25);
+}
+.kiel-about-join__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 200px;
+}
+
+.kiel-about-products-mini {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.15rem;
+  margin-top: 0.5rem;
+}
+@media (min-width: 768px) {
+  .kiel-about-products-mini {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.kiel-about-product-card {
+  border-radius: 1.25rem;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(216, 193, 195, 0.4);
+  box-shadow: 0 14px 36px rgba(44, 0, 10, 0.07);
+  display: flex;
+  flex-direction: column;
+}
+.kiel-about-product-card__img {
+  aspect-ratio: 5/4;
+  overflow: hidden;
+}
+.kiel-about-product-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.kiel-about-product-card:hover .kiel-about-product-card__img img {
+  transform: scale(1.05);
+}
+.kiel-about-product-card__body {
+  padding: 1rem 1.1rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.35rem;
+}
+.kiel-about-product-card__body h3 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #2c000a;
+  line-height: 1.35;
+}
+.kiel-about-product-card__body p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #534344;
+  flex: 1;
+}
+.kiel-about-product-card__foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.65rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid rgba(216, 193, 195, 0.35);
+}
+.kiel-about-product-card__foot strong {
+  font-family: "Playfair Display", serif;
+  color: #318135;
+  font-size: 1rem;
+}
+.kiel-about-product-card__foot a {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background: #2c000a;
+  padding: 0.45rem 0.75rem;
+  border-radius: 9999px;
+}
+
+.kiel-about-faq .faq-list {
+  margin-top: 1.5rem;
+}
+.kiel-about-partners-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem 2.5rem;
+  margin-top: 2rem;
+  padding: 0.5rem 0;
+}
+
+.kiel-about-partners-logos img {
+  max-height: 5.5rem;
+  max-width: 13.5rem;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.kiel-about-partners-premium {
+  position: relative;
+  padding: 2.5rem 0;
+  border-radius: 1.35rem;
+  background: linear-gradient(135deg, #e8f5e9 0%, #fff8f6 100%);
+  overflow: hidden;
+}
+.kiel-about-partners-premium::before {
+  content: "";
+  position: absolute;
+  left: -5%;
+  bottom: -30%;
+  width: 40%;
+  height: 80%;
+  background: url("../../img/filigrane/baobab-leaves-deco.svg") no-repeat center/contain;
+  opacity: 0.12;
+  animation: kiel-about-leaf-sway 10s ease-in-out infinite;
+}
+@keyframes kiel-about-leaf-sway {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .kiel-about-reveal,
+  .kiel-about-partners-premium::before {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

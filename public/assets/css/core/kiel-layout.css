@@ -1,0 +1,47 @@
+/* Défilement document sur html (molette + barre visible) */
+html {
+  height: auto;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body {
+  min-height: 100vh;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+body.kiel-drawer-open {
+  overflow: hidden !important;
+}
+
+html:has(body.kiel-drawer-open) {
+  overflow: hidden !important;
+}
+
+:root {
+  --kiel-header-clearance: 8.5rem;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --kiel-header-clearance: 9rem;
+  }
+}
+
+body > main.w-full {
+  padding-top: var(--kiel-header-clearance) !important;
+}
+
+#hero-section .hero-orbit-spin-group text {
+  font-size: 9.25px;
+  letter-spacing: 0.16em;
+}
+
+@media (min-width: 1024px) {
+  #hero-section .hero-orbit-spin-group text {
+    font-size: 9.75px;
+  }
+}

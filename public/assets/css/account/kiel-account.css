@@ -1,0 +1,421 @@
+.kiel-account-layout,
+.kiel-admin-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  align-items: start;
+}
+@media (min-width: 992px) {
+  .kiel-account-layout,
+  .kiel-admin-layout {
+    grid-template-columns: 260px minmax(0, 1fr);
+  }
+}
+
+.kiel-account-sidebar {
+  background: #fff;
+  border: 1px solid rgba(216, 193, 195, 0.45);
+  border-radius: 1.15rem;
+  padding: 1.15rem 1rem 1rem;
+  box-shadow: 0 12px 32px rgba(44, 0, 10, 0.05);
+  position: sticky;
+  top: 7.5rem;
+}
+.kiel-account-sidebar__profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 1rem;
+  margin-bottom: 0.85rem;
+  border-bottom: 1px solid rgba(216, 193, 195, 0.4);
+}
+.kiel-account-sidebar__avatar {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 9999px;
+  object-fit: cover;
+  border: 3px solid #b8e6ba;
+  box-shadow: 0 8px 22px rgba(44, 0, 10, 0.1);
+  margin-bottom: 0.55rem;
+  background: #fff8f6;
+}
+.kiel-account-sidebar__name {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 1.05rem;
+  color: #2c000a;
+  line-height: 1.25;
+}
+.kiel-account-sidebar__meta {
+  margin: 0.2rem 0 0;
+  font-size: 12px;
+  color: #534344;
+}
+.kiel-account-sidebar__nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.kiel-account-sidebar__nav a {
+  display: block;
+  padding: 0.55rem 0.65rem;
+  border-radius: 0.65rem;
+  font-size: 14px;
+  font-weight: 600;
+  color: #534344;
+  text-decoration: none;
+  border-left: none;
+  transition: color 0.2s;
+}
+.kiel-account-sidebar__nav a:hover {
+  color: #74313d;
+}
+.kiel-account-sidebar__nav a.is-active {
+  color: #318135;
+  font-weight: 800;
+}
+.kiel-account-sidebar__logout {
+  margin-top: 0.85rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid rgba(216, 193, 195, 0.4);
+}
+.kiel-account-sidebar__logout button {
+  width: 100%;
+  justify-content: center;
+  background: #c62828;
+  color: #fff;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.65rem 1rem;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s, filter 0.2s;
+}
+.kiel-account-sidebar__logout button:hover {
+  background: #b71c1c;
+  filter: brightness(1.05);
+}
+
+.kiel-account-main turbo-frame,
+.kiel-admin-main turbo-frame {
+  display: block;
+  min-width: 0;
+}
+
+.kiel-account-app .kiel-subhero,
+.kiel-admin-app .kiel-subhero {
+  min-height: clamp(160px, 22vh, 220px);
+  margin-bottom: 1.25rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.kiel-account-dashboard__stats {
+  margin-bottom: 1.5rem;
+}
+.kiel-account-stat {
+  flex: 1 1 140px;
+  padding: 1rem 1.15rem;
+  border-radius: 1rem;
+  background: #fff;
+  border: 1px solid rgba(216, 193, 195, 0.4);
+  box-shadow: 0 8px 24px rgba(44, 0, 10, 0.04);
+}
+.kiel-account-stat span {
+  display: block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #534344;
+  margin-bottom: 0.35rem;
+}
+.kiel-account-stat strong {
+  font-family: "Playfair Display", serif;
+  font-size: 1.75rem;
+  color: #2c000a;
+}
+.kiel-account-stat a {
+  font-weight: 700;
+  color: #318135;
+  text-decoration: none;
+}
+.kiel-account-stat a:hover {
+  text-decoration: underline;
+}
+.kiel-account-dashboard__title {
+  margin: 0 0 1rem;
+  font-family: "Playfair Display", serif;
+  font-size: 1.25rem;
+  color: #2c000a;
+}
+.kiel-account-dashboard__more {
+  margin: 1.25rem 0 0;
+  text-align: center;
+}
+.kiel-account-dashboard__more a {
+  font-weight: 700;
+  color: #74313d;
+}
+.kiel-account-orders-pagination {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+.kiel-account-order-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  font-size: 14px;
+  font-weight: 600;
+}
+.kiel-account-order-actions a {
+  color: #74313d;
+}
+
+.kiel-account-page-head {
+  margin-bottom: 1.35rem;
+  padding-bottom: 0.15rem;
+}
+.kiel-account-page-head__title {
+  margin: 0 0 0.35rem;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.45rem, 2.5vw, 1.85rem);
+  font-weight: 700;
+  color: #2c000a;
+  line-height: 1.15;
+}
+.kiel-account-page-head__lead {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #534344;
+  max-width: 42rem;
+}
+
+.kiel-empty-state {
+  padding: 2rem 1.5rem;
+  border-radius: 1.15rem;
+  background: #fff8f6;
+  border: 1px dashed rgba(116, 49, 61, 0.25);
+  text-align: center;
+}
+.kiel-empty-state p {
+  margin: 0 0 1rem;
+  color: #534344;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.kiel-profile-flash {
+  margin: 0 0 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  background: #cce8cd;
+  color: #1e4d22;
+  font-size: 14px;
+  font-weight: 700;
+}
+.kiel-profile-layout__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+.kiel-profile-layout--wide {
+  width: 100%;
+  max-width: none;
+}
+.kiel-profile-layout--wide .kiel-profile-layout__form {
+  padding: 1.75rem 1.65rem;
+}
+.kiel-profile-layout__form {
+  padding: 1.5rem 1.35rem;
+  border-radius: 1.15rem;
+  background: #fff;
+  border: 1px solid rgba(216, 193, 195, 0.45);
+  box-shadow: 0 12px 32px rgba(44, 0, 10, 0.05);
+}
+.kiel-profile-form label {
+  display: block;
+  margin-bottom: 0.85rem;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #534344;
+}
+.kiel-profile-form input,
+.kiel-profile-form textarea {
+  display: block;
+  width: 100%;
+  margin-top: 0.35rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(216, 193, 195, 0.55);
+  background: #fff8f6;
+  padding: 0.75rem 1rem;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+.kiel-profile-form input:focus,
+.kiel-profile-form textarea:focus {
+  outline: none;
+  border-color: #318135;
+  box-shadow: 0 0 0 3px rgba(184, 230, 186, 0.45);
+}
+.kiel-profile-form__submit {
+  margin-top: 0.35rem;
+  width: 100%;
+  justify-content: center;
+  background: #2c000a;
+  border-radius: 9999px;
+}
+.kiel-profile-form__submit:hover {
+  background: #74313d;
+}
+.kiel-profile-photo-card {
+  padding: 1.5rem 1.25rem;
+  border-radius: 1.15rem;
+  background: linear-gradient(165deg, #fff8f6 0%, #fff 55%);
+  border: 1px solid rgba(216, 193, 195, 0.45);
+  box-shadow: 0 12px 32px rgba(44, 0, 10, 0.05);
+  text-align: center;
+}
+.kiel-profile-photo-card__preview {
+  width: 9.5rem;
+  height: 9.5rem;
+  margin: 0 auto 1rem;
+  border-radius: 9999px;
+  overflow: hidden;
+  border: 4px solid #b8e6ba;
+  box-shadow: 0 10px 28px rgba(44, 0, 10, 0.12);
+  background: #fff;
+}
+.kiel-profile-photo-card__preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.kiel-profile-photo-card__title {
+  margin: 0 0 0.35rem;
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  color: #2c000a;
+}
+.kiel-profile-photo-card__hint {
+  margin: 0 0 1rem;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #534344;
+}
+.kiel-profile-photo-card__file {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.65rem 1.1rem;
+  border-radius: 9999px;
+  background: #2c000a;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.kiel-profile-photo-card__file:hover {
+  background: #74313d;
+}
+.kiel-profile-photo-card__file input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+.kiel-profile-photo-card__file .material-symbols-outlined {
+  font-size: 18px;
+}
+
+.kiel-account-wishlist__hint {
+  margin: 0 0 1.15rem;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #534344;
+}
+.kiel-account-wishlist__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+.kiel-account-wishlist__item {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: #fff;
+  border: 1px solid rgba(216, 193, 195, 0.45);
+  box-shadow: 0 8px 24px rgba(44, 0, 10, 0.04);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.kiel-account-app .kiel-account-wishlist__item:hover {
+  border-color: rgba(116, 49, 61, 0.35);
+  box-shadow: 0 12px 32px rgba(44, 0, 10, 0.07);
+}
+.kiel-account-wishlist__thumb {
+  display: block;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  aspect-ratio: 1;
+  background: #fff8f6;
+}
+.kiel-account-wishlist__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.kiel-account-wishlist__body h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+  font-family: "Playfair Display", serif;
+}
+.kiel-account-wishlist__body h3 a {
+  color: #2c000a;
+  text-decoration: none;
+}
+.kiel-account-wishlist__body h3 a:hover {
+  color: #74313d;
+}
+.kiel-account-wishlist__price {
+  margin: 0 0 0.65rem;
+  font-size: 14px;
+  font-weight: 700;
+  color: #318135;
+}
+.kiel-account-wishlist__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+.kiel-account-wishlist__remove {
+  border: none;
+  background: transparent;
+  color: #c62828;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+}

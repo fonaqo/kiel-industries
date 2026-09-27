@@ -1,0 +1,9 @@
+/* Header / shell : débordement visible (logo non coupé) */
+.header-nav-row,
+.header-shell {
+  overflow: visible;
+}
+
+.header-nav-row {
+  align-items: center;
+}

@@ -1,0 +1,45 @@
+/**
+ * Petits écrans d’ordinateur (lg sans xl) : filigranes section manifeste / à propos accueil.
+ * Mobile (<768) et grands écrans (≥1280) : styles inchangés.
+ */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  #manifeste-impact .baobab-scene {
+    right: -4.5rem !important;
+    left: auto !important;
+    top: 58% !important;
+    width: min(240px, 28vw) !important;
+    max-width: 240px;
+    transform: translateY(-48%) translateX(0) !important;
+    opacity: 0.92;
+  }
+
+  #manifeste-impact .baobab-scene .baobab-sil,
+  #manifeste-impact .baobab-scene .baobab-sil--wine {
+    opacity: 0.52 !important;
+  }
+
+  #manifeste-impact .about-deco--leaves-alt {
+    display: none !important;
+  }
+
+  #manifeste-impact .about-deco--leaves {
+    width: min(170px, 22vw) !important;
+    left: -5% !important;
+    top: 4% !important;
+  }
+
+  #manifeste-impact .about-deco--fruits {
+    width: min(190px, 24vw) !important;
+    right: 0 !important;
+    bottom: 6% !important;
+  }
+
+  #manifeste-impact .about-deco img {
+    opacity: 0.11 !important;
+  }
+
+  #manifeste-impact .about-copy {
+    position: relative;
+    z-index: 2;
+  }
+}

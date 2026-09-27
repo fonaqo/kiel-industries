@@ -1,0 +1,45 @@
+/* Accents bordeaux KIEL (#2c000a / #74313d) — sections accueil */
+.kiel-why-v3-visual-badge {
+  background: linear-gradient(145deg, #74313d 0%, #2c000a 100%) !important;
+  box-shadow: 0 12px 32px rgba(44, 0, 10, 0.28) !important;
+}
+.kiel-why-v3-visual-badge__num {
+  color: #ffdea4 !important;
+}
+.kiel-why-v3-visual-badge__txt {
+  color: rgba(255, 248, 246, 0.92) !important;
+}
+
+.kiel-command-pipeline__node {
+  background: #2c000a !important;
+  box-shadow: 0 0 0 4px #fff, 0 0 0 6px rgba(44, 0, 10, 0.28) !important;
+  animation-name: kiel-pipeline-node-wine !important;
+}
+.kiel-circuit-trace {
+  stroke: #2c000a !important;
+}
+.kiel-circuit-flow {
+  stroke: #ffb2bb !important;
+  filter: drop-shadow(0 0 5px rgba(255, 178, 187, 0.75)) !important;
+}
+.kiel-circuit-glow {
+  stroke: rgba(116, 49, 61, 0.22) !important;
+}
+.kiel-circuit-via {
+  fill: #74313d !important;
+  stroke: #2c000a !important;
+}
+@keyframes kiel-pipeline-node-wine {
+  0%,
+  78%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 4px #fff, 0 0 0 6px rgba(44, 0, 10, 0.26);
+    background: #2c000a;
+  }
+  18% {
+    transform: scale(1.08);
+    box-shadow: 0 0 0 4px #fff, 0 0 0 11px rgba(44, 0, 10, 0.38), 0 0 22px rgba(44, 0, 10, 0.18);
+    background: #74313d;
+  }
+}

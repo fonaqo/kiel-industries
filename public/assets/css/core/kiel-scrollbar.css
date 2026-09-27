@@ -1,0 +1,104 @@
+/**
+ * Barre de défilement (référence utilisateur) : piste sombre, poignée grise arrondie, flèches.
+ */
+:root {
+  --kiel-scrollbar-size: 16px;
+  --kiel-scrollbar-track: #2d2d2d;
+  --kiel-scrollbar-thumb: #b3b3b3;
+  --kiel-scrollbar-thumb-hover: #cbcbcb;
+  --kiel-scrollbar-border: #2d2d2d;
+}
+
+html {
+  scrollbar-gutter: stable;
+  scrollbar-width: auto;
+  scrollbar-color: var(--kiel-scrollbar-thumb) var(--kiel-scrollbar-track) !important;
+}
+
+/* Remplace le style bordeaux global de kiel-site-styles.css */
+::-webkit-scrollbar {
+  width: var(--kiel-scrollbar-size);
+  height: var(--kiel-scrollbar-size);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--kiel-scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--kiel-scrollbar-thumb);
+  border-radius: 999px;
+  border: 3px solid var(--kiel-scrollbar-border);
+  min-height: 2.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--kiel-scrollbar-thumb-hover);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--kiel-scrollbar-track);
+}
+
+html::-webkit-scrollbar {
+  width: var(--kiel-scrollbar-size);
+  height: var(--kiel-scrollbar-size);
+}
+
+html::-webkit-scrollbar-button:single-button {
+  display: block;
+  width: var(--kiel-scrollbar-size);
+  height: var(--kiel-scrollbar-size);
+  background-color: var(--kiel-scrollbar-track);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 8px 8px;
+}
+
+html::-webkit-scrollbar-button:single-button:vertical:decrement {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5' viewBox='0 0 8 5'%3E%3Cpath fill='%23b3b3b3' d='M4 0 8 5H0z'/%3E%3C/svg%3E");
+}
+
+html::-webkit-scrollbar-button:single-button:vertical:increment {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5' viewBox='0 0 8 5'%3E%3Cpath fill='%23b3b3b3' d='M4 5 0 0h8z'/%3E%3C/svg%3E");
+}
+
+html::-webkit-scrollbar-button:single-button:horizontal:decrement {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='5' height='8' viewBox='0 0 5 8'%3E%3Cpath fill='%23b3b3b3' d='M0 4 5 0v8z'/%3E%3C/svg%3E");
+}
+
+html::-webkit-scrollbar-button:single-button:horizontal:increment {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='5' height='8' viewBox='0 0 5 8'%3E%3Cpath fill='%23b3b3b3' d='M5 4 0 0v8z'/%3E%3C/svg%3E");
+}
+
+html::-webkit-scrollbar-corner {
+  background: var(--kiel-scrollbar-track);
+}
+
+/* Panneaux internes (drawers, admin…) */
+.kiel-drawer__body,
+.kiel-cms-sidebar__nav,
+.kiel-cms-app__main {
+  scrollbar-width: auto;
+  scrollbar-color: var(--kiel-scrollbar-thumb) var(--kiel-scrollbar-track);
+}
+
+.kiel-drawer__body::-webkit-scrollbar,
+.kiel-cms-sidebar__nav::-webkit-scrollbar,
+.kiel-cms-app__main::-webkit-scrollbar {
+  width: 12px;
+}
+
+.kiel-drawer__body::-webkit-scrollbar-track,
+.kiel-cms-sidebar__nav::-webkit-scrollbar-track,
+.kiel-cms-app__main::-webkit-scrollbar-track {
+  background: var(--kiel-scrollbar-track);
+}
+
+.kiel-drawer__body::-webkit-scrollbar-thumb,
+.kiel-cms-sidebar__nav::-webkit-scrollbar-thumb,
+.kiel-cms-app__main::-webkit-scrollbar-thumb {
+  background-color: var(--kiel-scrollbar-thumb);
+  border-radius: 999px;
+  border: 2px solid var(--kiel-scrollbar-border);
+}

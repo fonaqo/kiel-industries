@@ -1,0 +1,27 @@
+.kiel-legal-prose {
+  max-width: none;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #534344;
+}
+.kiel-legal-prose h2 {
+  margin: 2rem 0 0.65rem;
+  font-family: "Playfair Display", serif;
+  font-size: 1.35rem;
+  color: #2c000a;
+}
+.kiel-legal-prose h2:first-child {
+  margin-top: 0;
+}
+.kiel-legal-prose p {
+  margin: 0 0 1rem;
+}
+.kiel-legal-prose ul {
+  margin: 0 0 1rem 1.15rem;
+  padding: 0;
+}
+.kiel-legal-prose a {
+  color: #318135;
+  font-weight: 600;
+}

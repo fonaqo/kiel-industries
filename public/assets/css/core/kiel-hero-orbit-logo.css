@@ -1,0 +1,22 @@
+/**
+ * Accueil — logo centré dans le disque vert (sans toucher header/footer/surtitres).
+ */
+#hero-section .hero-orbit-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero-section .hero-orbit-center img.kiel-logo--hero {
+  object-position: center center;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateX(12%);
+  transform-origin: center center;
+}
+
+@media (min-width: 1024px) {
+  #hero-section .hero-orbit-center img.kiel-logo--hero {
+    transform: translateX(11%);
+  }
+}

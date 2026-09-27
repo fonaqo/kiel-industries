@@ -1,0 +1,288 @@
+.kiel-expertises-list-head {
+  margin-bottom: 2.75rem;
+}
+.kiel-expertise-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 640px) {
+  .kiel-expertise-hero-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1100px) {
+  .kiel-expertise-hero-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.kiel-expertise-card {
+  position: relative;
+  display: block;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  min-height: 340px;
+  box-shadow: 0 14px 36px rgba(44, 0, 10, 0.1);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  text-decoration: none;
+  color: inherit;
+}
+.kiel-expertise-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 48px rgba(44, 0, 10, 0.16);
+}
+.kiel-expertise-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+.kiel-expertise-card:hover img {
+  transform: scale(1.05);
+}
+.kiel-expertise-card__shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(44, 0, 10, 0.15) 0%, rgba(44, 0, 10, 0.88) 100%);
+}
+.kiel-expertise-card__body {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.25rem 1.15rem;
+  color: #fff;
+}
+.kiel-expertise-card__tag {
+  align-self: flex-start;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.kiel-expertise-card__body h3 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  line-height: 1.25;
+}
+.kiel-expertise-card__body p {
+  margin: 0.45rem 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.88);
+}
+.kiel-expertise-card__link {
+  margin-top: 0.85rem;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #b8e6ba;
+}
+
+.kiel-expertise-pole__tag {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #318135;
+}
+.kiel-expertise-pole__hero {
+  margin-bottom: 1.5rem;
+  border-radius: 1.15rem;
+  overflow: hidden;
+  border: 1px solid rgba(216, 193, 195, 0.4);
+}
+.kiel-expertise-pole__hero img {
+  display: block;
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+}
+.kiel-expertise-pole-section {
+  padding: 2.5rem 0;
+}
+.kiel-expertise-pole-section--muted {
+  background: #fff8f6;
+}
+.kiel-expertise-pole-section__title {
+  margin: 0 0 1.35rem;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  color: #2c000a;
+}
+.kiel-expertise-highlights {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .kiel-expertise-highlights {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.kiel-expertise-highlight {
+  padding: 1.25rem 1.15rem;
+  border-radius: 1.1rem;
+  background: #fff;
+  border: 1px solid rgba(216, 193, 195, 0.4);
+  box-shadow: 0 10px 28px rgba(44, 0, 10, 0.05);
+}
+.kiel-expertise-highlight__icon {
+  display: inline-flex;
+  width: 2.5rem;
+  height: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: rgba(184, 230, 186, 0.45);
+  color: #318135;
+  font-size: 22px;
+  margin-bottom: 0.65rem;
+}
+.kiel-expertise-highlight h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+  color: #2c000a;
+}
+.kiel-expertise-highlight p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #534344;
+}
+.kiel-expertise-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  align-items: start;
+}
+@media (min-width: 992px) {
+  .kiel-expertise-split {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+}
+.kiel-expertise-checklist {
+  list-style: none;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+.kiel-expertise-checklist li {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 14px;
+  color: #534344;
+}
+.kiel-expertise-checklist .material-symbols-outlined {
+  font-size: 20px;
+  color: #318135;
+}
+.kiel-expertise-split__stats {
+  display: grid;
+  gap: 0.75rem;
+}
+.kiel-expertise-stat {
+  padding: 1rem 1.15rem;
+  border-radius: 1rem;
+  background: #fff;
+  border: 1px solid rgba(216, 193, 195, 0.35);
+  text-align: center;
+}
+.kiel-expertise-stat strong {
+  display: block;
+  font-family: "Playfair Display", serif;
+  font-size: 1.75rem;
+  color: #2c000a;
+}
+.kiel-expertise-stat span {
+  font-size: 12px;
+  color: #534344;
+}
+.kiel-expertise-related {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .kiel-expertise-related {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.kiel-expertise-related__card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.1rem;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(216, 193, 195, 0.4);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.kiel-expertise-related__card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(44, 0, 10, 0.1);
+}
+.kiel-expertise-related__card img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+}
+.kiel-expertise-related__card > div {
+  padding: 1rem 1.05rem 1.15rem;
+}
+.kiel-expertise-related__tag {
+  margin: 0 0 0.35rem;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #318135;
+}
+.kiel-expertise-related__card h3 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 1.05rem;
+  line-height: 1.3;
+  color: #2c000a;
+}
+.kiel-expertise-related__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  margin-top: 0.65rem;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #74313d;
+}
+.kiel-expertise-related__all {
+  margin: 1.25rem 0 0;
+  text-align: center;
+}
+.kiel-expertise-related__all a {
+  font-weight: 800;
+  color: #318135;
+}
+.kiel-expertise-pole-cta {
+  padding-top: 0.5rem;
+}

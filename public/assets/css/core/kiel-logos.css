@@ -1,0 +1,194 @@
+/**
+ * Logos KIEL — header (comme avant), wordmark, marque baobab, partenaires.
+ */
+
+/* —— Header : ancré à gauche (pas de décalage / float visuel) —— */
+.header-nav-row > a[data-path="accueil"] {
+  flex: 0 0 auto;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  justify-content: flex-start !important;
+  float: none !important;
+}
+
+.header-nav-row .kiel-header-logo {
+  display: block;
+  height: 3rem;
+  width: auto;
+  max-width: min(19rem, 90vw);
+  margin: 0 !important;
+  float: none !important;
+  object-fit: contain;
+  object-position: left center;
+}
+
+@media (min-width: 640px) {
+  .header-nav-row .kiel-header-logo {
+    height: 4.5rem;
+  }
+}
+
+/* —— Wordmark complet (footer, hero, sceau…) —— */
+img.kiel-logo-wordmark {
+  object-fit: contain;
+  object-position: left center;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+.kiel-footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.kiel-footer-brand .kiel-footer-logo-wordmark {
+  display: block;
+  width: auto !important;
+  max-width: 20rem !important;
+  height: 5rem !important;
+  margin: 0 0 1rem !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  float: none !important;
+  align-self: flex-start;
+  object-fit: contain;
+  object-position: left center;
+  filter: brightness(0) invert(1);
+  opacity: 0.96;
+}
+
+/* —— Logo KIEL sur surtitres —— */
+.kiel-logo-eyebrow {
+  display: block;
+  height: 2.65rem;
+  width: auto;
+  max-width: 6.25rem;
+  object-fit: contain;
+  object-position: left center;
+  flex-shrink: 0;
+}
+
+.kiel-section-eyebrow .kiel-logo-eyebrow {
+  height: 2.75rem;
+  max-width: 6.5rem;
+}
+
+.kiel-baobab-hub__title-o .kiel-logo-eyebrow,
+.kiel-baobab-hub__title-o .kiel-baobab-hub__title-logo {
+  display: inline-block;
+  position: static !important;
+  left: auto !important;
+  top: auto !important;
+  transform: none !important;
+  animation: none !important;
+  vertical-align: -0.18em;
+  height: 1.15em;
+  width: auto;
+  max-width: 1.65em;
+  min-width: 1.15em;
+  object-fit: contain;
+  object-position: left center;
+}
+
+/* —— Hero accueil (disque vert) —— */
+#hero-section .hero-orbit.hero-orbit--lg {
+  width: 252px;
+  height: 252px;
+  flex-shrink: 0;
+}
+
+@media (min-width: 1024px) {
+  #hero-section .hero-orbit.hero-orbit--lg {
+    width: 272px;
+    height: 272px;
+  }
+}
+
+#hero-section .hero-orbit-center {
+  padding: 1.65rem;
+}
+
+#hero-section .kiel-logo--hero,
+#hero-section .hero-badge-icon.kiel-logo--hero {
+  width: 13rem;
+  height: auto;
+  max-width: none;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.96;
+}
+
+@media (min-width: 1024px) {
+  #hero-section .kiel-logo--hero,
+  #hero-section .hero-badge-icon.kiel-logo--hero {
+    width: 10rem;
+  }
+
+  #hero-section .hero-orbit-center {
+    padding: 1rem;
+  }
+}
+
+/* —— Astuces, sceau à propos —— */
+.kiel-astuces-hero__badge img.kiel-logo--hero {
+  width: 4.25rem;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.95;
+}
+
+.kiel-about-v2-seal img.kiel-logo-wordmark {
+  width: 100%;
+  max-height: 3.35rem;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.kiel-about-v2-seal {
+  width: 6.75rem !important;
+  height: 6.75rem !important;
+  padding: 1.1rem !important;
+}
+
+/* —— Bande partenaires —— */
+.partners-logo-link {
+  min-height: 4rem;
+}
+
+.partners-logo-link img {
+  max-height: 5.5rem;
+  max-width: 13.5rem;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* —— Paiement footer —— */
+.kiel-footer-payments__img {
+  width: min(100%, 19rem);
+  height: auto;
+  max-height: 3.25rem;
+  object-fit: contain;
+}
+
+/* —— CMS admin —— */
+.kiel-cms-admin-logo {
+  display: block;
+  width: min(100%, 17rem);
+  height: auto;
+  max-height: 4.5rem;
+  object-fit: contain;
+  object-position: left center;
+}
+
+/* —— Filigrane wordmark (si utilisé) —— */
+.kiel-logo-filigrane--watermark.kiel-logo-wordmark {
+  width: min(420px, 58vw);
+  max-height: 460px;
+  opacity: 0.07;
+  object-fit: contain;
+}

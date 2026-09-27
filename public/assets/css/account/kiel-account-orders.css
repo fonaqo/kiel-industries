@@ -1,0 +1,137 @@
+/* Espace client — listes commandes (tableau de bord & mes commandes) */
+
+.kiel-account-app .kiel-orders-panel {
+  border-radius: 1.15rem;
+  background: #fff;
+  border: 1px solid rgba(216, 193, 195, 0.5);
+  box-shadow: 0 14px 40px rgba(44, 0, 10, 0.06);
+}
+
+.kiel-account-app .kiel-orders-table thead th {
+  background: linear-gradient(180deg, #2c000a 0%, #3d0a14 100%);
+  border-bottom: none;
+  padding: 0.85rem 1.1rem;
+}
+
+.kiel-account-app .kiel-orders-table tbody td {
+  padding: 0.95rem 1.1rem;
+}
+
+.kiel-account-dashboard__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 10.5rem), 1fr));
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.kiel-account-app .kiel-account-stat {
+  position: relative;
+  overflow: hidden;
+  padding: 1.15rem 1.25rem;
+  border-radius: 1.1rem;
+  background: linear-gradient(145deg, #fff 0%, #fff8f6 100%);
+  border: 1px solid rgba(216, 193, 195, 0.45);
+}
+
+.kiel-account-app .kiel-account-stat::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #2c000a, #74313d, #318135);
+}
+
+.kiel-account-app .kiel-account-stat--accent strong {
+  color: #318135;
+}
+
+.kiel-account-dashboard__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.kiel-account-dashboard__title-link {
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #74313d;
+  text-decoration: none;
+}
+
+.kiel-account-dashboard__title-link:hover {
+  text-decoration: underline;
+}
+
+/* Mobile : cartes commande */
+@media (max-width: 640px) {
+  .kiel-account-app .kiel-orders-table-wrap {
+    overflow: visible;
+  }
+
+  .kiel-account-app .kiel-orders-table {
+    min-width: 0;
+  }
+
+  .kiel-account-app .kiel-orders-table thead {
+    display: none;
+  }
+
+  .kiel-account-app .kiel-orders-table tbody tr {
+    display: block;
+    margin: 0 0 0.85rem;
+    padding: 0.35rem 0;
+    border: 1px solid rgba(216, 193, 195, 0.45);
+    border-radius: 1rem;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(44, 0, 10, 0.04);
+  }
+
+  .kiel-account-app .kiel-orders-table tbody tr:hover td {
+    background: transparent;
+  }
+
+  .kiel-account-app .kiel-orders-table tbody td {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.55rem 1rem;
+    border-bottom: 1px solid rgba(216, 193, 195, 0.25);
+    text-align: right;
+  }
+
+  .kiel-account-app .kiel-orders-table tbody td:last-child {
+    border-bottom: none;
+    padding-bottom: 0.75rem;
+    justify-content: flex-end;
+  }
+
+  .kiel-account-app .kiel-orders-table tbody td::before {
+    content: attr(data-label);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #74313d;
+    text-align: left;
+    flex-shrink: 0;
+  }
+
+  .kiel-account-app .kiel-orders-table__col-action::before {
+    display: none;
+  }
+
+  .kiel-account-app .kiel-orders-table__date {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .kiel-account-app .kiel-orders-table__date .kiel-orders-table__time {
+    margin-top: 0;
+  }
+}
