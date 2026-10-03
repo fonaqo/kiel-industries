@@ -4,12 +4,13 @@
   $galleryItems = $cms->json('home.gallery.items', []);
   $homeFaqItems = $cms->json('home.faq.items', []);
   $homeStatsItems = $cms->json('home.stats.items', []);
+  $homeTestimonialItems = $cms->json('home.testimonials.items', []);
 @endphp
 <main class="w-full pt-[118px] sm:pt-[122px] bg-surface"><div class="flex flex-col w-full">
 <!-- 1. HERO VIDÉO, ROTATION DES TEXTES -->
 <section class="relative w-full overflow-hidden bg-primary text-on-primary min-h-[580px] lg:min-h-[700px] flex flex-col" id="hero-section">
 <div class="absolute inset-0 z-0">
-<video autoplay="" class="w-full h-full object-cover object-center" id="hero-video" loop="" muted="" playsinline="" poster="{{ $cms->assetUrl($g('hero.video_poster', 'assets/img/ressources/home-1.png')) }}">
+<video class="w-full h-full object-cover object-center" id="hero-video" loop="" muted="" playsinline="" preload="none" poster="{{ \App\Support\KielImage::url($g('hero.video_poster', 'assets/img/ressources/home-1.png')) }}">
 <source src="{{ asset('assets/video/baobab-video.mp4') }}" type="video/mp4"/>
 </video>
 <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/78 to-primary/38"></div>
@@ -45,7 +46,7 @@
 <defs><path d="M 100,100 m -74,0 a 74,74 0 1,1 148,0 a 74,74 0 1,1 -148,0" fill="none" id="hero-slogan-ring"/></defs>
 <g class="hero-orbit-spin-group">
 <text fill="#ffffff" font-family="Plus Jakarta Sans,sans-serif" font-weight="800">
-<textPath href="#hero-slogan-ring" startOffset="0">KIEL · INDUSTRIES · BAOBAB · ÉCONOMIE CIRCULAIRE · NATURE · PARAKOU · </textPath>
+<textPath href="#hero-slogan-ring" startOffset="0"> KIEL INDUSTRIES · BAOBAB · ÉCONOMIE CIRCULAIRE · NATURE · PARAKOU · </textPath>
 </text>
 </g>
 </svg>
@@ -72,25 +73,25 @@
 </section>
 
 <!-- 2. À PROPOS, KIEL Industries (section d’origine) -->
-<section class="relative w-full bg-surface py-space-xl lg:py-[4.5rem] overflow-hidden" id="manifeste-impact">
+<section class="relative w-full bg-surface py-space-xl xl:py-[4.5rem] overflow-hidden" id="manifeste-impact">
 <div aria-hidden="true" class="about-deco about-deco--leaves absolute -left-[6%] top-[8%] hidden sm:block">
 <img alt="" loading="lazy" src="{{ asset('assets/img/filigrane/baobab-leaves-deco.svg') }}"/>
 </div>
 <div aria-hidden="true" class="about-deco about-deco--fruits absolute -right-[4%] bottom-[12%] hidden md:block">
 <img alt="" loading="lazy" src="{{ asset('assets/img/filigrane/baobab-fruits-deco.svg') }}"/>
 </div>
-<div aria-hidden="true" class="about-deco about-deco--leaves-alt absolute left-[38%] bottom-[6%] hidden lg:block">
+<div aria-hidden="true" class="about-deco about-deco--leaves-alt absolute left-[38%] bottom-[6%] hidden 2xl:block">
 <img alt="" loading="lazy" src="{{ asset('assets/img/filigrane/baobab-leaves-deco.svg') }}"/>
 </div>
 <div class="kiel-container relative z-10">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl lg:gap-10 items-center">
-<div class="lg:col-span-5 flex flex-col gap-space-md relative about-reveal" id="about-text-reveal">
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-xl xl:gap-10 items-center">
+<div class="xl:col-span-5 flex flex-col gap-space-md relative about-reveal" id="about-text-reveal">
 <div aria-hidden="true" class="baobab-scene pointer-events-none absolute -right-20 sm:-right-16 lg:right-6 xl:right-6 2xl:right-[-30%] top-[46%] lg:top-[60%] -translate-y-1/2 translate-x-3 lg:translate-x-6 w-[min(280px,58vw)] sm:w-[min(320px,50vw)] lg:w-[min(360px,42vw)] z-0">
 @include('partials.kiel-baobab-silhouette', ['wine' => true, 'class' => 'w-[90%] h-auto'])
 </div>
 <div class="relative z-10 flex flex-col gap-space-md about-copy">
-@include('partials.kiel-section-eyebrow', ['label' => 'À PROPOS DE', 'class' => 'about-item'])
-<h2 class="about-item font-headline-lg text-headline-lg lg:text-[2.75rem] text-primary font-title leading-tight -mt-1">{{ $g('manifeste.title', 'KIEL Industries') }}</h2>
+@include('partials.kiel-section-eyebrow', ['label' => 'À PROPOS DE', 'class' => 'about-item', 'withoutIcon' => true])
+<h2 class="about-item font-headline-lg text-headline-lg xl:text-[2.75rem] text-primary font-title leading-tight -mt-1">{{ $g('manifeste.title', 'KIEL Industries') }}</h2>
 <p class="about-item font-body-lg text-body-lg text-on-surface leading-snug max-w-xl" id="about-story">{!! $g('manifeste.p1', '') !!}</p>
 <p class="about-item font-body-md text-body-md text-on-surface-variant leading-relaxed max-w-xl">{!! $g('manifeste.p2', '') !!}</p>
 <p class="about-item font-body-md text-body-md text-on-surface-variant leading-relaxed max-w-xl">{!! $g('manifeste.p3', '') !!}</p>
@@ -106,18 +107,18 @@
 </div>
 </div>
 </div>
-<div class="lg:col-span-4 relative about-collage-wrap mx-auto w-full max-w-xl lg:max-w-none about-reveal-scale" id="about-collage-reveal">
+<div class="xl:col-span-4 relative about-collage-wrap mx-auto w-full max-w-xl xl:max-w-none about-reveal-scale" id="about-collage-reveal">
 <div class="about-photo absolute top-0 right-0 w-[74%] h-[44%] z-10">
-<img alt="Paysage de savane et baobab au Borgou" class="w-full h-full object-cover" loading="lazy" src="{{ $cms->assetUrl($g('manifeste.img1', 'assets/img/ressources/home-1.png')) }}"/>
+<x-kiel-img :src="$g('manifeste.img1', 'assets/img/ressources/home-1.png')" alt="Paysage de savane et baobab au Borgou" class="w-full h-full object-cover"/>
 </div>
 <div class="about-photo absolute top-[22%] left-0 w-[66%] h-[40%] z-20">
-<img alt="Femmes productrices autour du baobab à Parakou" class="w-full h-full object-cover" loading="lazy" src="{{ $cms->assetUrl($g('manifeste.img2', 'assets/img/ressources/home-2.png')) }}"/>
+<x-kiel-img :src="$g('manifeste.img2', 'assets/img/ressources/home-2.png')" alt="Femmes productrices autour du baobab à Parakou" class="w-full h-full object-cover"/>
 </div>
 <div class="about-photo absolute bottom-0  left-[20%] w-[78%] h-[46%] z-30">
-<img alt="Huile pure de baobab KIEL" class="w-full h-full object-cover object-center" loading="lazy" src="{{ $cms->assetUrl($g('manifeste.img3', 'assets/img/ressources/home-3.png')) }}"/>
+<x-kiel-img :src="$g('manifeste.img3', 'assets/img/ressources/home-3.png')" alt="Huile pure de baobab KIEL INDUSTRIES" class="w-full h-full object-cover object-center"/>
 </div>
 </div>
-<div class="lg:col-span-3 flex flex-col gap-space-md about-reveal" id="about-activities-reveal">
+<div class="xl:col-span-3 flex flex-col gap-space-md about-reveal" id="about-activities-reveal">
 <h3 class="about-item font-headline-md text-headline-md text-primary font-title leading-snug">Nos activités</h3>
 <ul class="about-item flex flex-col divide-y divide-outline-variant/25">
 <li class="flex gap-3 py-4 first:pt-0">
@@ -199,10 +200,10 @@
 <div class="kiel-discover-grid">
 <div class="kiel-discover-media about-item">
 <div class="kiel-discover-photo kiel-discover-photo--main">
-<img alt="Savane et baobab au Borgou" loading="lazy" src="{{ asset('assets/img/ressources/decouvre-1.png') }}"/>
+<x-kiel-img src="assets/img/ressources/decouvre-1.png" alt="Savane et baobab au Borgou — KIEL INDUSTRIES"/>
 </div>
 <div class="kiel-discover-photo kiel-discover-photo--accent">
-<img alt="Femmes productrices au Borgou" loading="lazy" src="{{ asset('assets/img/sections/decouvre/decouvre-2.png') }}"/>
+<x-kiel-img src="assets/img/sections/decouvre/decouvre-2.png" alt="Femmes productrices baobab au Borgou — KIEL"/>
 </div>
 <div class="kiel-discover-badge kiel-discover-badge--green">
 <span class="kiel-discover-badge__num">500+</span>
@@ -334,7 +335,7 @@
 
       <div class="kiel-baobab-hub__center">
         <div class="kiel-baobab-hub__tree-wrap">
-          <img alt="Baobab majestueux, symbole KIEL INDUSTRIES" class="kiel-baobab-hub__tree" loading="lazy" src="{{ asset('assets/img/baobab/baobab-arbre.png') }}"/>
+          <x-kiel-img src="assets/img/baobab/baobab-arbre.png" alt="Baobab majestueux — filière KIEL INDUSTRIES Parakou" class="kiel-baobab-hub__tree"/>
         </div>
       </div>
 
@@ -591,6 +592,61 @@
 </details>
 @endforelse
 </div>
+</div>
+</section>
+
+<!-- TÉMOIGNAGES -->
+<section class="w-full py-space-xl lg:py-[4rem] bg-surface-container-low" id="temoignages" aria-labelledby="kiel-testimonials-title">
+<div class="kiel-container text-center">
+<div class="kiel-section-eyebrow justify-center mb-space-sm">
+@include('partials.kiel-baobab-heading-icon')
+<span class="kiel-eyebrow font-label-md text-label-md text-secondary uppercase tracking-widest">{{ $g('testimonials.eyebrow', 'Retour d\'expérience directe') }}</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary font-title max-w-3xl mx-auto" id="kiel-testimonials-title">{{ $g('testimonials.title', 'Adoré à Cotonou, Parakou, Paris & Abidjan') }}</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-sm max-w-2xl mx-auto">{{ $g('testimonials.lead', 'Retours de clientes et clients sur la boutique KIEL : qualité, traçabilité et service.') }}</p>
+<div class="testimonial-marquee overflow-hidden mt-space-lg">
+<div class="testimonial-marquee-track kiel-marquee-track" id="testimonial-track" style="--marquee-duration:54s;">
+@forelse($homeTestimonialItems as $item)
+<article class="testimonial-marquee-card kiel-testimonial-card flex flex-col min-h-[300px]">
+<p class="quote-serif kiel-testimonial-quote flex-1">{{ $item['quote'] ?? '' }}</p>
+<footer class="kiel-testimonial-author">
+@php
+  $photo = ! empty($item['photo']) ? $cms->assetUrl($item['photo']) : asset('assets/img/account/default-avatar.svg');
+@endphp
+<img alt="" class="kiel-testimonial-photo" loading="lazy" src="{{ $photo }}"/>
+<p class="kiel-testimonial-name">{{ $item['name'] ?? '' }}</p>
+<p class="kiel-testimonial-meta">{{ $item['meta'] ?? '' }}</p>
+</footer>
+</article>
+@empty
+<article class="testimonial-marquee-card kiel-testimonial-card flex flex-col min-h-[300px]">
+<p class="quote-serif kiel-testimonial-quote flex-1">« L'huile pure de baobab KIEL a transformé l'élasticité de ma peau en 2 semaines. Texture légère, parfum discret, traçabilité rassurante. »</p>
+<footer class="kiel-testimonial-author">
+<img alt="" class="kiel-testimonial-photo" loading="lazy" src="{{ asset('assets/img/account/default-avatar.svg') }}"/>
+<p class="kiel-testimonial-name">Amina Agossa</p>
+<p class="kiel-testimonial-meta">Esthéticienne · Cotonou, Bénin</p>
+</footer>
+</article>
+<article class="testimonial-marquee-card kiel-testimonial-card flex flex-col min-h-[300px]">
+<p class="quote-serif kiel-testimonial-quote flex-1">« La super-pulpe est incomparable par rapport à ce qu'on trouve ailleurs. Mon fils adore les smoothies et je sais d'où vient chaque sachet. »</p>
+<footer class="kiel-testimonial-author">
+<img alt="" class="kiel-testimonial-photo" loading="lazy" src="{{ asset('assets/img/account/default-avatar.svg') }}"/>
+<p class="kiel-testimonial-name">Marc Dubois</p>
+<p class="kiel-testimonial-meta">Consultant nutrition · Paris, France</p>
+</footer>
+</article>
+<article class="testimonial-marquee-card kiel-testimonial-card flex flex-col min-h-[300px]">
+<p class="quote-serif kiel-testimonial-quote flex-1">« La livraison à Parakou a été rapide et le suivi très clair. Service impeccable pour une marque locale que je recommande. »</p>
+<footer class="kiel-testimonial-author">
+<img alt="" class="kiel-testimonial-photo" loading="lazy" src="{{ asset('assets/img/account/default-avatar.svg') }}"/>
+<p class="kiel-testimonial-name">Fatou Kébé</p>
+<p class="kiel-testimonial-meta">Commerçante · Abidjan, Côte d'Ivoire</p>
+</footer>
+</article>
+@endforelse
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-3 text-center">Défilement continu · survolez pour mettre en pause.</p>
 </div>
 </section>
 
@@ -952,6 +1008,7 @@
     initBaobabHub();
     initSeamlessMarquee(document.getElementById('catalogue-track'), () => initProductCards());
     initProductCards();
+    initSeamlessMarquee(document.getElementById('testimonial-track'));
     initSeamlessMarquee(document.getElementById('partners-track'));
     initStatCounters();
     initShopPickCards();

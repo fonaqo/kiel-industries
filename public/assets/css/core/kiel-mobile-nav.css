@@ -1,0 +1,193 @@
+/**
+ * Menu navigation mobile (tiroir #kiel-drawer-nav, <1024px).
+ */
+@media (max-width: 1023px) {
+  .header-nav-row.kiel-header-nav-row {
+    gap: 0.5rem;
+    min-width: 0;
+  }
+
+  .kiel-header-nav-row > .kiel-header-nav-tools,
+  .kiel-header-nav-row > div.flex.flex-shrink-0 {
+    flex-shrink: 0;
+    gap: 0.35rem;
+  }
+
+  .kiel-header-nav-tools {
+    flex: 0 0 auto;
+    margin-left: auto;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.15rem;
+    min-width: 0;
+    max-width: none;
+    padding-right: 0;
+  }
+
+  .kiel-header-nav-tools > button,
+  .kiel-header-nav-tools > a {
+    flex-shrink: 0;
+  }
+
+  .kiel-site-menu-toggle {
+    position: static !important;
+    transform: none !important;
+    margin: 0 0 0 0.1rem !important;
+    order: 99;
+  }
+}
+
+.kiel-drawer--nav {
+  max-width: min(100vw, 22.5rem);
+}
+
+.kiel-drawer__body--nav {
+  padding: 0.65rem 0 1.25rem;
+  flex: 1;
+  min-height: 0;
+}
+
+.kiel-drawer-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 0;
+  padding: 0 1.15rem;
+}
+
+.kiel-drawer-nav-links > a {
+  display: flex;
+  align-items: center;
+  min-height: 3rem;
+  padding: 0.65rem 0;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #2c000a;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(216, 193, 195, 0.45);
+}
+
+.kiel-drawer-nav-links > a.is-active,
+.kiel-drawer-nav-links > a:hover {
+  color: #318135;
+}
+
+.kiel-drawer-nav-group {
+  border-bottom: 1px solid rgba(216, 193, 195, 0.45);
+}
+
+.kiel-drawer-nav-group > a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  min-height: 3rem;
+  padding: 0.65rem 0 0.35rem;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #2c000a;
+  text-decoration: none;
+}
+
+.kiel-drawer-nav-group > a::after {
+  content: "chevron_right";
+  font-family: "Material Symbols Outlined";
+  font-size: 20px;
+  font-weight: 400;
+  color: rgba(83, 67, 68, 0.55);
+  flex-shrink: 0;
+}
+
+.kiel-drawer-nav-group > a.is-active,
+.kiel-drawer-nav-group > a:hover {
+  color: #318135;
+}
+
+.kiel-drawer-nav-sublist {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0 0 0.5rem 0.65rem;
+  margin: 0 0 0.15rem;
+  border-left: 2px solid rgba(49, 129, 53, 0.22);
+}
+
+.kiel-drawer-nav-sublist a {
+  display: block;
+  padding: 0.45rem 0 0.45rem 0.85rem;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #534344;
+  text-decoration: none;
+}
+
+.kiel-drawer-nav-sublist a:hover,
+.kiel-drawer-nav-sublist a.is-active {
+  color: #318135;
+}
+
+.kiel-drawer-nav-foot {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(216, 193, 195, 0.55);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.kiel-drawer-nav-foot a {
+  display: flex;
+  align-items: center;
+  min-height: 2.85rem;
+  padding: 0.55rem 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #534344;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(216, 193, 195, 0.35);
+}
+
+.kiel-drawer-nav-foot a:last-child {
+  border-bottom: none;
+}
+
+.kiel-drawer-nav-foot a.is-active,
+.kiel-drawer-nav-foot a:hover {
+  color: #318135;
+}
+
+.kiel-drawer-nav-links .kiel-site-mobile-nav__cta {
+  margin-top: 0.85rem;
+  margin-bottom: 0.25rem;
+  justify-content: center;
+  min-height: 2.85rem;
+  border: none !important;
+  border-radius: 9999px;
+  background: #318135 !important;
+  color: #fff !important;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.85rem 1.15rem !important;
+}
+
+.kiel-site-menu-toggle {
+  border: 1px solid transparent;
+}
+
+.kiel-site-menu-toggle:hover,
+.kiel-site-menu-toggle:focus-visible {
+  border-color: rgba(49, 129, 53, 0.25);
+  background: rgba(49, 129, 53, 0.06);
+}
+
+body.kiel-site-menu-open .kiel-site-menu-toggle {
+  color: #318135;
+  border-color: rgba(49, 129, 53, 0.35);
+  background: rgba(49, 129, 53, 0.08);
+}

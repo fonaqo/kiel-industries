@@ -3,10 +3,17 @@
   if (!loader) return;
 
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const minMs = reduced ? 350 : 1200;
+  const mobile = window.matchMedia('(max-width: 767px)').matches;
+  const minMs = reduced ? 150 : mobile ? 280 : 500;
   const start = performance.now();
 
+  let finished = false;
+
   function finish() {
+    if (finished) {
+      return;
+    }
+    finished = true;
     const wait = Math.max(0, minMs - (performance.now() - start));
     setTimeout(() => {
       loader.classList.add('is-done');
@@ -19,10 +26,14 @@
     }, wait);
   }
 
-  if (document.readyState === 'complete') {
-    finish();
-  } else {
-    window.addEventListener('load', finish, { once: true });
-    setTimeout(finish, 5000);
-  }
+  const ready = () => {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', finish, { once: true });
+    } else {
+      finish();
+    }
+  };
+
+  ready();
+  setTimeout(finish, 4500);
 })();

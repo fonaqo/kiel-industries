@@ -5,6 +5,7 @@
 /* —— Header : ancré à gauche (pas de décalage / float visuel) —— */
 .header-nav-row > a[data-path="accueil"] {
   flex: 0 0 auto;
+  flex-shrink: 0;
   margin-left: 0 !important;
   margin-right: 0 !important;
   justify-content: flex-start !important;
@@ -13,18 +14,46 @@
 
 .header-nav-row .kiel-header-logo {
   display: block;
-  height: 3rem;
+  height: 3.25rem;
   width: auto;
   max-width: min(19rem, 90vw);
   margin: 0 !important;
   float: none !important;
+  flex-shrink: 0;
   object-fit: contain;
   object-position: left center;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 640px) and (max-width: 767px) {
+  .header-nav-row .kiel-header-logo {
+    height: 5.25rem !important;
+    max-width: min(16rem, 58vw) !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header-nav-row .kiel-header-logo {
+    height: 4.75rem !important;
+    max-width: min(15rem, 52vw) !important;
+  }
+}
+
+@media (min-width: 1024px) {
   .header-nav-row .kiel-header-logo {
     height: 4.5rem;
+    max-width: min(19rem, 100%);
+  }
+}
+
+@media (max-width: 639px) {
+  .header-nav-row .kiel-header-logo {
+    height: 5.5rem !important;
+    max-width: min(17.5rem, 68vw) !important;
+  }
+
+  .header-nav-row > a[data-path="accueil"] {
+    max-width: 70% !important;
+    flex-shrink: 0 !important;
   }
 }
 
@@ -47,8 +76,8 @@ img.kiel-logo-wordmark {
 .kiel-footer-brand .kiel-footer-logo-wordmark {
   display: block;
   width: auto !important;
-  max-width: 20rem !important;
-  height: 5rem !important;
+  max-width: min(100%, 24rem) !important;
+  height: 6.5rem !important;
   margin: 0 0 1rem !important;
   margin-left: 0 !important;
   margin-right: auto !important;
@@ -141,17 +170,73 @@ img.kiel-logo-wordmark {
   opacity: 0.95;
 }
 
-.kiel-about-v2-seal img.kiel-logo-wordmark {
-  width: 100%;
-  max-height: 3.35rem;
-  object-fit: contain;
+.kiel-about-v2-seal img.kiel-logo-wordmark,
+.kiel-about-v2-seal img.kiel-logo-wordmark--seal {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: none !important;
+  margin: 0 auto !important;
+  object-fit: contain !important;
+  object-position: center center !important;
   filter: brightness(0) invert(1);
+  transform: scale(2.38) !important;
+  transform-origin: center center !important;
 }
 
-.kiel-about-v2-seal {
-  width: 6.75rem !important;
-  height: 6.75rem !important;
-  padding: 1.1rem !important;
+/* Ne pas hériter de l’ancrage à gauche du wordmark global */
+img.kiel-logo-wordmark--seal {
+  object-position: center center !important;
+}
+
+/* Accueil — collage manifeste (#manifeste-impact) : sceau uniquement (taille collage = kiel-site-styles) */
+#manifeste-impact .about-collage-wrap > .kiel-about-v2-seal {
+  position: absolute;
+  left: 6%;
+  top: 34%;
+  z-index: 40;
+  margin: 0;
+  width: 8.75rem !important;
+  height: 8.75rem !important;
+  padding: 0.1rem !important;
+  overflow: hidden;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+@media (min-width: 640px) {
+  #manifeste-impact .about-collage-wrap > .kiel-about-v2-seal {
+    left: 8%;
+    top: 36%;
+  }
+}
+
+@media (min-width: 768px) {
+  #manifeste-impact .about-collage-wrap > .kiel-about-v2-seal {
+    width: 9.25rem !important;
+    height: 9.25rem !important;
+    padding: 0.1rem !important;
+  }
+
+  #manifeste-impact .about-collage-wrap > .kiel-about-v2-seal img.kiel-logo-wordmark--seal {
+    transform: scale(2.42) !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  #manifeste-impact .about-collage-wrap > .kiel-about-v2-seal {
+    left: 4%;
+    top: 38%;
+    width: 9.5rem !important;
+    height: 9.5rem !important;
+    padding: 0.1rem !important;
+  }
+
+  #manifeste-impact .about-collage-wrap > .kiel-about-v2-seal img.kiel-logo-wordmark--seal {
+    transform: scale(2.45) !important;
+  }
 }
 
 /* —— Bande partenaires —— */

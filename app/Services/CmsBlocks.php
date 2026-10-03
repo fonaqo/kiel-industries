@@ -73,7 +73,17 @@ class CmsBlocks
     public function put(string $key, mixed $content, string $type = 'text'): void
     {
         $stored = $type === 'json' ? json_encode($content, JSON_UNESCAPED_UNICODE) : (string) $content;
-        CmsBlock::query()->where('key', $key)->update(['content' => $stored, 'type' => $type]);
+        $group = explode('.', $key)[0] ?: 'general';
+        $label = config("cms-groups.{$group}.fields.{$key}.label") ?? $key;
+        CmsBlock::query()->updateOrCreate(
+            ['key' => $key],
+            [
+                'group' => $group,
+                'label' => is_string($label) ? $label : $key,
+                'type' => $type,
+                'content' => $stored,
+            ]
+        );
         Cache::forget(self::CACHE_KEY);
     }
 

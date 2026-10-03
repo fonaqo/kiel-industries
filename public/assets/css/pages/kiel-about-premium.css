@@ -68,7 +68,7 @@
   font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #1e4d22;
+  color: #318135;
 }
 
 .kiel-about-mission-premium {
@@ -288,7 +288,7 @@
   padding: 0.2rem 0.55rem;
   border-radius: 9999px;
   background: #cce8cd;
-  color: #1e4d22;
+  color: #318135;
   font-size: 9px;
   font-weight: 800;
   letter-spacing: 0.1em;
@@ -426,7 +426,7 @@
   background: #e8f5e9;
   font-size: 11px;
   font-weight: 700;
-  color: #1e4d22;
+  color: #318135;
 }
 .kiel-director-v5__chips .material-symbols-outlined {
   font-size: 16px;
@@ -443,7 +443,7 @@
   align-items: center;
   padding: 2rem 1.5rem;
   border-radius: 1.5rem;
-  background: linear-gradient(125deg, #2c000a 0%, #74313d 48%, #1e4d22 100%);
+  background: linear-gradient(125deg, #2c000a 0%, #74313d 48%, #318135 100%);
   color: #fff;
   overflow: hidden;
   position: relative;

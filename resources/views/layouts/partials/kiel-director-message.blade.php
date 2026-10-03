@@ -1,6 +1,8 @@
 @php
   $cms = app(\App\Services\CmsBlocks::class);
   $b = fn (string $k, string $d = '') => (string) $cms->get('about.'.$k, $d);
+  $kielLead = config('kiel.team.0', []);
+  $directorDisplayName = trim(($kielLead['first_name'] ?? 'Célia').' '.($kielLead['last_name'] ?? 'CHABI'));
 @endphp
 <section class="kiel-section kiel-section--cream" id="directrice">
 <div class="kiel-wrap kiel-about-reveal">
@@ -18,7 +20,7 @@
 <p>{!! $b('director.quote', '') !!}</p>
 </blockquote>
 <div class="kiel-director-v5__author">
-<p class="kiel-director-v5__name">{{ $b('director.name', 'Célia Chabi') }}</p>
+<p class="kiel-director-v5__name">{{ $directorDisplayName }}</p>
 <p class="kiel-director-v5__role">{{ $b('director.role', 'Présidente directrice générale · KIEL INDUSTRIES') }}</p>
 </div>
 </div>

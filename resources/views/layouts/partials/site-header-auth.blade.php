@@ -1,5 +1,5 @@
 @auth
-<div class="kiel-header-account hidden md:block">
+<div class="kiel-header-account hidden lg:block">
 <button type="button" class="kiel-header-account__trigger" id="kiel-header-account-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="kiel-header-account-menu">
 Mon compte
 <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>

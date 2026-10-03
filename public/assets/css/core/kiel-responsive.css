@@ -1,0 +1,151 @@
+/**
+ * Garde-fous responsifs globaux (débordement horizontal, médias, conteneurs).
+ */
+html {
+  overflow-x: clip;
+}
+
+body {
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+main,
+.header-shell,
+.kiel-site-footer,
+.kiel-drawer {
+  max-width: 100%;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+.kiel-container,
+.kiel-wrap {
+  width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+@media (max-width: 1023px) {
+  .kiel-container,
+  .kiel-wrap {
+    max-width: 100%;
+  }
+}
+
+/* Desktop : gouttières seulement (pleine largeur utile), sauf pages .kiel-wrap */
+@media (min-width: 1024px) {
+  .kiel-container {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Footer : fond pleine largeur, contenu aligné bords (hors colonne étroite) */
+  .kiel-site-footer .kiel-container {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+section[class*="overflow-hidden"],
+.kiel-section {
+  overflow-x: clip;
+}
+
+/* Grilles Tailwind : éviter que les colonnes poussent la page */
+.grid > *,
+.flex > * {
+  min-width: 0;
+}
+
+/* Carrousels pleine largeur (marge négative + gutter) : ne pas dépasser le viewport */
+@media (max-width: 767px) {
+  #categories-boutique .kiel-categories-grid,
+  #univers-manufacture .kiel-container > .grid,
+  #services-kiel .kiel-service-strip__grid,
+  #equipe .kiel-about-team-v3,
+  #selection-du-jour .kiel-shop-grid--pick-day,
+  #catalogue-selection .kiel-shop-grid--pick {
+    max-width: 100%;
+  }
+}
+
+.fixed.top-0.left-0.right-0 {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Mobile global — toutes les pages */
+@media (max-width: 767px) {
+  html {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  main.w-full {
+    overflow-x: clip;
+    max-width: 100%;
+  }
+
+  .header-shell,
+  .kiel-site-footer {
+    overflow-x: clip;
+    max-width: 100%;
+  }
+
+  .kiel-subhero {
+    min-height: clamp(155px, 22vh, 215px);
+    padding-top: 1.1rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .kiel-subhero__lead,
+  .kiel-page-banner__lead {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .kiel-shop-page,
+  .kiel-pdp-page,
+  .kiel-contact-v3,
+  .kiel-docs-page,
+  .kiel-actu-page,
+  .kiel-astuces-page,
+  .kiel-auth-page,
+  .kiel-account-app,
+  .kiel-about-v2,
+  .kiel-admin-app {
+    overflow-x: clip;
+    max-width: 100%;
+  }
+
+  .kiel-breadcrumb-jewel__trail {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .kiel-shop-layout,
+  .kiel-account-layout,
+  .kiel-contact-v3-form-row {
+    min-width: 0;
+  }
+
+  .kiel-cms-app table,
+  .kiel-account-app table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}

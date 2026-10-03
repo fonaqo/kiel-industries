@@ -1,4 +1,9 @@
 @media (max-width: 767px) {
+  :root {
+    --kiel-gutter-x: 1.65rem;
+    --kiel-scroll-inset: 0.45rem;
+  }
+
   html,
   body {
     max-width: 100%;
@@ -95,6 +100,35 @@
     padding: 0.38rem 0.55rem;
     font-size: 11px !important;
     line-height: 1.2;
+  }
+
+  /* Titres de section — un peu plus compacts sur mobile */
+  h2.font-headline-lg.text-headline-lg,
+  .kiel-section-head h2.font-headline-lg,
+  .font-headline-lg.text-headline-lg {
+    font-size: clamp(1.32rem, 5vw, 1.62rem) !important;
+    line-height: 1.18 !important;
+    letter-spacing: -0.02em !important;
+  }
+
+  h3.font-headline-md.text-headline-md,
+  .font-headline-md.text-headline-md {
+    font-size: clamp(1.1rem, 4.1vw, 1.32rem) !important;
+    line-height: 1.22 !important;
+  }
+
+  .kiel-subhero__title {
+    font-size: clamp(1.38rem, 4.8vw, 1.72rem) !important;
+    line-height: 1.14 !important;
+  }
+
+  .kiel-page-banner__title {
+    font-size: clamp(1.4rem, 4.8vw, 1.75rem) !important;
+  }
+
+  .kiel-about-v2-title,
+  .kiel-about-title {
+    font-size: clamp(1.45rem, 5vw, 1.75rem) !important;
   }
 
   /* Hero accueil : typographie plus compacte */
@@ -195,8 +229,9 @@
     padding-bottom: 0.5rem;
     margin-left: calc(-1 * var(--kiel-gutter-x));
     margin-right: calc(-1 * var(--kiel-gutter-x));
-    padding-left: var(--kiel-gutter-x);
-    padding-right: var(--kiel-gutter-x);
+    padding-left: calc(var(--kiel-gutter-x) + var(--kiel-scroll-inset));
+    padding-right: calc(var(--kiel-gutter-x) + var(--kiel-scroll-inset));
+    scroll-padding-left: calc(var(--kiel-gutter-x) + var(--kiel-scroll-inset));
   }
 
   #categories-boutique .kiel-cat-card {
@@ -216,8 +251,9 @@
     padding-bottom: 0.65rem;
     margin-left: calc(-1 * var(--kiel-gutter-x));
     margin-right: calc(-1 * var(--kiel-gutter-x));
-    padding-left: var(--kiel-gutter-x);
-    padding-right: var(--kiel-gutter-x);
+    padding-left: calc(var(--kiel-gutter-x) + var(--kiel-scroll-inset));
+    padding-right: calc(var(--kiel-gutter-x) + var(--kiel-scroll-inset));
+    scroll-padding-left: calc(var(--kiel-gutter-x) + var(--kiel-scroll-inset));
   }
 
   #univers-manufacture .kiel-container > .grid > a {
@@ -244,8 +280,9 @@
     padding-bottom: 0.65rem;
     margin-left: calc(-1 * var(--kiel-gutter-x));
     margin-right: calc(-1 * var(--kiel-gutter-x));
-    padding-left: var(--kiel-gutter-x);
-    padding-right: var(--kiel-gutter-x);
+    padding-left: calc(var(--kiel-gutter-x) + var(--kiel-scroll-inset));
+    padding-right: calc(var(--kiel-gutter-x) + var(--kiel-scroll-inset));
+    scroll-padding-left: calc(var(--kiel-gutter-x) + var(--kiel-scroll-inset));
   }
 
   #selection-du-jour .kiel-shop-grid--pick-day > *,
@@ -277,8 +314,9 @@
     padding-bottom: 0.5rem;
     margin-left: calc(-1 * var(--kiel-gutter-x));
     margin-right: calc(-1 * var(--kiel-gutter-x));
-    padding-left: var(--kiel-gutter-x);
-    padding-right: var(--kiel-gutter-x);
+    padding-left: calc(var(--kiel-gutter-x) + var(--kiel-scroll-inset));
+    padding-right: calc(var(--kiel-gutter-x) + var(--kiel-scroll-inset));
+    scroll-padding-left: calc(var(--kiel-gutter-x) + var(--kiel-scroll-inset));
   }
 
   #services-kiel .kiel-service-strip__item {
@@ -470,7 +508,8 @@
     gap: 0.85rem;
     margin-left: calc(-1 * var(--kiel-gutter-x));
     margin-right: calc(-1 * var(--kiel-gutter-x));
-    padding: 0 var(--kiel-gutter-x) 0.35rem;
+    padding: 0 calc(var(--kiel-gutter-x) + var(--kiel-scroll-inset)) 0.35rem;
+    scroll-padding-left: calc(var(--kiel-gutter-x) + var(--kiel-scroll-inset));
   }
 
   #equipe .kiel-about-team-v3 article {

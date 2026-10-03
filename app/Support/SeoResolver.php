@@ -62,7 +62,13 @@ class SeoResolver
             $product = $viewData['product'];
             $title = $product->meta_title ?: $product->name;
             $description = $product->meta_description ?: Str::limit(strip_tags($product->description ?? ''), 160);
+            if ($description !== '' && ! str_contains(Str::lower($description), 'baobab')) {
+                $description = Str::limit($description.' — Produit baobab KIEL INDUSTRIES, Parakou.', 160);
+            }
             $keywords = $product->meta_keywords ?: $keywords;
+            if ($keywords !== '' && ! str_contains(Str::lower($keywords), 'kiel')) {
+                $keywords = 'KIEL INDUSTRIES, baobab, '.$keywords;
+            }
             $ogType = 'product';
             $image = $product->og_image ? asset(ltrim($product->og_image, '/')) : $product->image_url;
             $canonical = route('boutique.show', $product);
@@ -175,18 +181,30 @@ class SeoResolver
                 '@type' => 'Organization',
                 '@id' => url('/#organization'),
                 'name' => $org['legal_name'] ?? 'KIEL INDUSTRIES',
+                'alternateName' => ['KIEL', 'KIEL Industries', 'Kiel Industries', 'KIEL INDUSTRIES Parakou'],
                 'url' => url('/'),
                 'logo' => asset('assets/img/brand/logo-kiel.svg'),
                 'email' => $org['email'] ?? null,
                 'telephone' => $org['phone'] ?? null,
                 'taxID' => $org['ifu'] ?? null,
                 'sameAs' => $org['same_as'] ?? [],
+                'description' => $base['default_description'] ?? '',
                 'address' => [
                     '@type' => 'PostalAddress',
                     'addressLocality' => $geo['city'] ?? 'Parakou',
                     'addressRegion' => $geo['region_name'] ?? 'Borgou',
                     'addressCountry' => $geo['country_code'] ?? 'BJ',
                 ],
+            ],
+            [
+                '@context' => 'https://schema.org',
+                '@type' => 'Brand',
+                '@id' => url('/#brand'),
+                'name' => 'KIEL',
+                'alternateName' => 'KIEL INDUSTRIES',
+                'description' => 'Marque baobab — nutrition, cosmétique et artisanat transformés à Parakou, Bénin.',
+                'logo' => asset('assets/img/brand/logo-kiel.svg'),
+                'url' => url('/'),
             ],
             [
                 '@context' => 'https://schema.org',
@@ -221,11 +239,16 @@ class SeoResolver
                 ),
                 'knowsAbout' => [
                     'Baobab',
+                    'Baobab Adansonia digitata',
+                    'Huile de baobab',
+                    'Poudre de pulpe de baobab',
+                    'KIEL INDUSTRIES',
                     'Nutrition',
                     'Cosmétique naturelle',
                     'Économie circulaire',
                     'Parakou',
                     'Borgou',
+                    'Bénin',
                 ],
             ],
             [

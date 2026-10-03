@@ -2,6 +2,21 @@
   const root = document.getElementById('kiel-shop-live');
   if (!root) return;
 
+  const filtersPanel = root.querySelector('.kiel-shop-filters-panel');
+  const filtersDesktopMq = window.matchMedia('(min-width: 992px)');
+
+  function syncFiltersPanelOpen() {
+    if (!filtersPanel) return;
+    if (filtersDesktopMq.matches) {
+      filtersPanel.setAttribute('open', '');
+    } else {
+      filtersPanel.removeAttribute('open');
+    }
+  }
+
+  syncFiltersPanelOpen();
+  filtersDesktopMq.addEventListener('change', syncFiltersPanelOpen);
+
   const boutiqueUrl = document.body.dataset.boutiqueUrl || '/boutique';
   let debounceTimer;
 
@@ -98,7 +113,7 @@
       fetchResults(new URL(reset.href));
       return;
     }
-    const pageLink = e.target.closest('#kiel-shop-results .pagination a');
+    const pageLink = e.target.closest('#kiel-shop-results .kiel-pagination a');
     if (pageLink) {
       e.preventDefault();
       fetchResults(new URL(pageLink.href));

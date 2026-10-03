@@ -3,9 +3,7 @@
 @endphp
 <title>{{ $seoMeta['title'] ?? 'KIEL INDUSTRIES' }}</title>
 <meta name="description" content="{{ $seoMeta['description'] ?? '' }}"/>
-@if(! empty($seoMeta['keywords']))
-<meta name="keywords" content="{{ $seoMeta['keywords'] }}"/>
-@endif
+<meta name="keywords" content="{{ $seoMeta['keywords'] ?? config('kiel.seo.default_keywords', 'KIEL INDUSTRIES, baobab') }}"/>
 <meta name="robots" content="{{ $seoMeta['robots'] ?? 'index,follow' }}"/>
 <meta name="author" content="KIEL INDUSTRIES"/>
 <meta name="publisher" content="KIEL INDUSTRIES"/>

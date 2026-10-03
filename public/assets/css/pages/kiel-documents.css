@@ -3,6 +3,10 @@
   padding: 3.5rem 0 4rem;
 }
 
+.kiel-docs-section .kiel-section-head > p.font-body-md {
+  margin-bottom: 2rem;
+}
+
 .kiel-docs-filters {
   display: flex;
   flex-wrap: wrap;

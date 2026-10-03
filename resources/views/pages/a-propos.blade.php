@@ -38,7 +38,7 @@
   $highlights = $cms->json('about.highlights', []);
   $missionCards = $cms->json('about.mission.cards', []);
   $timelineSteps = $cms->json('about.timeline.steps', []);
-  $teamMembers = $cms->json('about.team.members', []);
+  $teamMembers = config('kiel.team', $cms->json('about.team.members', []));
   $aboutFaq = $cms->json('about.faq.items', []);
 @endphp
 <main class="w-full pt-[118px] sm:pt-[122px] bg-surface kiel-about-v2">
@@ -55,7 +55,7 @@
 <img alt="Atelier KIEL" class="kiel-about-v2-media__top" src="{{ $cms->assetUrl($b('intro.img_top', 'assets/img/sections/about/1.jpg')) }}"/>
 <img alt="Productrices au Borgou" class="kiel-about-v2-media__bottom" src="{{ $cms->assetUrl($b('intro.img_bottom', 'assets/img/sections/about/2.webp')) }}"/>
 <div class="kiel-about-v2-seal" aria-hidden="true">
-<img alt="KIEL INDUSTRIES" class="kiel-logo-wordmark" src="{{ asset('assets/img/brand/logo-kiel.svg') }}"/>
+<img alt="KIEL INDUSTRIES" class="kiel-logo-wordmark kiel-logo-wordmark--seal" src="{{ asset('assets/img/brand/logo-kiel-seal.svg') }}"/>
 </div>
 </div>
 <div class="kiel-about-v2-copy">

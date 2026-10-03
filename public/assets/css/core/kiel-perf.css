@@ -1,0 +1,12 @@
+/**
+ * Perf front : médias below-the-fold, priorité LCP.
+ */
+img[loading="lazy"] {
+  content-visibility: auto;
+}
+
+@media (max-width: 767px) {
+  #hero-section #hero-video {
+    object-position: center 35%;
+  }
+}

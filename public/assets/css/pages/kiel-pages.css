@@ -1,6 +1,7 @@
 :root {
   --kiel-gutter-x: 1.5rem;
   --kiel-wine: #2c000a;
+  --kiel-title-color: #5d0d1a;
   --kiel-green: #318135;
   --kiel-gold: #eec067;
   --kiel-cream: #fff8f6;
@@ -270,7 +271,7 @@
   margin: 0 0 0.5rem;
   font-family: "Playfair Display", serif;
   font-size: clamp(1.65rem, 3vw, 2.25rem);
-  color: var(--kiel-wine);
+  color: var(--kiel-title-color);
 }
 .kiel-bento {
   display: grid;

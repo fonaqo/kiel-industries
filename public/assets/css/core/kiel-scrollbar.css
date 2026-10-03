@@ -102,3 +102,93 @@ html::-webkit-scrollbar-corner {
   border-radius: 999px;
   border: 2px solid var(--kiel-scrollbar-border);
 }
+
+/* Mobile : barres de défilement de la page invisibles (scroll tactile conservé) */
+@media (max-width: 767px) {
+  html {
+    scrollbar-gutter: auto;
+    scrollbar-width: none;
+  }
+
+  body {
+    scrollbar-width: none;
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+    display: none;
+  }
+
+  html::-webkit-scrollbar-thumb,
+  body::-webkit-scrollbar-thumb,
+  html::-webkit-scrollbar-track,
+  body::-webkit-scrollbar-track,
+  html::-webkit-scrollbar-corner,
+  body::-webkit-scrollbar-corner {
+    display: none;
+    background: transparent;
+  }
+
+  html::-webkit-scrollbar-button,
+  body::-webkit-scrollbar-button {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  /* Carrousels / grilles horizontales (cards) : scroll tactile, barre invisible */
+  .kiel-hide-scrollbar,
+  #categories-boutique .kiel-categories-grid,
+  #univers-manufacture .kiel-container > .grid,
+  #selection-du-jour .kiel-shop-grid--pick-day,
+  #catalogue-selection .kiel-shop-grid--pick,
+  #services-kiel .kiel-service-strip__grid,
+  #equipe .kiel-about-team-v3,
+  .kiel-pdp-breadcrumb,
+  .kiel-pdp-tabs__nav,
+  .kiel-breadcrumb-jewel__trail {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .kiel-hide-scrollbar::-webkit-scrollbar,
+  #categories-boutique .kiel-categories-grid::-webkit-scrollbar,
+  #univers-manufacture .kiel-container > .grid::-webkit-scrollbar,
+  #selection-du-jour .kiel-shop-grid--pick-day::-webkit-scrollbar,
+  #catalogue-selection .kiel-shop-grid--pick::-webkit-scrollbar,
+  #services-kiel .kiel-service-strip__grid::-webkit-scrollbar,
+  #equipe .kiel-about-team-v3::-webkit-scrollbar,
+  .kiel-pdp-breadcrumb::-webkit-scrollbar,
+  .kiel-pdp-tabs__nav::-webkit-scrollbar,
+  .kiel-breadcrumb-jewel__trail::-webkit-scrollbar {
+    display: none;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  .kiel-hide-scrollbar::-webkit-scrollbar-thumb,
+  .kiel-hide-scrollbar::-webkit-scrollbar-track,
+  #categories-boutique .kiel-categories-grid::-webkit-scrollbar-thumb,
+  #categories-boutique .kiel-categories-grid::-webkit-scrollbar-track,
+  #univers-manufacture .kiel-container > .grid::-webkit-scrollbar-thumb,
+  #univers-manufacture .kiel-container > .grid::-webkit-scrollbar-track,
+  #selection-du-jour .kiel-shop-grid--pick-day::-webkit-scrollbar-thumb,
+  #selection-du-jour .kiel-shop-grid--pick-day::-webkit-scrollbar-track,
+  #catalogue-selection .kiel-shop-grid--pick::-webkit-scrollbar-thumb,
+  #catalogue-selection .kiel-shop-grid--pick::-webkit-scrollbar-track,
+  #services-kiel .kiel-service-strip__grid::-webkit-scrollbar-thumb,
+  #services-kiel .kiel-service-strip__grid::-webkit-scrollbar-track,
+  #equipe .kiel-about-team-v3::-webkit-scrollbar-thumb,
+  #equipe .kiel-about-team-v3::-webkit-scrollbar-track,
+  .kiel-pdp-breadcrumb::-webkit-scrollbar-thumb,
+  .kiel-pdp-breadcrumb::-webkit-scrollbar-track,
+  .kiel-pdp-tabs__nav::-webkit-scrollbar-thumb,
+  .kiel-pdp-tabs__nav::-webkit-scrollbar-track,
+  .kiel-breadcrumb-jewel__trail::-webkit-scrollbar-thumb,
+  .kiel-breadcrumb-jewel__trail::-webkit-scrollbar-track {
+    display: none;
+    background: transparent;
+  }
+}

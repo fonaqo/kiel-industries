@@ -143,6 +143,260 @@
     grid-column: 2;
   }
 }
+
+/* Boutique — mobile & tablette */
+@media (max-width: 991px) {
+  .kiel-shop-page .kiel-section--content {
+    padding-top: 1.35rem;
+    padding-bottom: 2.25rem;
+  }
+
+  .kiel-shop-page .kiel-wrap.kiel-shop-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+    padding-left: max(var(--kiel-gutter-x, 1.5rem), var(--kiel-safe-left, 0px));
+    padding-right: max(var(--kiel-gutter-x, 1.5rem), var(--kiel-safe-right, 0px));
+    min-width: 0;
+  }
+
+  /* Réordonne : compteur → tri prix → filtres → grille */
+  .kiel-shop-page #kiel-shop-results,
+  .kiel-shop-page .kiel-shop-toolbar {
+    display: contents;
+  }
+
+  .kiel-shop-page .kiel-shop-toolbar > div:first-child {
+    order: 1;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .kiel-shop-page .kiel-shop-sort {
+    order: 2;
+  }
+
+  .kiel-shop-page .kiel-shop-sidebar {
+    order: 3;
+    min-width: 0;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .kiel-shop-page #kiel-shop-grid,
+  .kiel-shop-page .kiel-shop-grid {
+    order: 4;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .kiel-shop-page .kiel-shop-pagination {
+    order: 5;
+    width: 100%;
+  }
+
+  .kiel-shop-filters-panel {
+    border-radius: 1rem;
+    border: 1px solid rgba(216, 193, 195, 0.45);
+    background: #fff;
+    box-shadow: 0 10px 28px rgba(44, 0, 10, 0.05);
+    overflow: hidden;
+  }
+
+  .kiel-shop-filters-panel__summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.85rem 1rem;
+    font-family: "Playfair Display", serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #2c000a;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .kiel-shop-filters-panel__summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .kiel-shop-filters-panel__chevron {
+    transition: transform 0.2s ease;
+    color: #318135;
+  }
+
+  .kiel-shop-filters-panel[open] .kiel-shop-filters-panel__chevron {
+    transform: rotate(180deg);
+  }
+
+  .kiel-shop-filters-panel__inner {
+    padding: 0 1rem 1.1rem;
+    border-top: 1px solid rgba(216, 193, 195, 0.35);
+  }
+
+  .kiel-shop-sort {
+    width: 100%;
+  }
+
+  .kiel-shop-sort select {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .kiel-shop-tags {
+    width: 100%;
+  }
+
+  .kiel-shop-layout .kiel-shop-grid {
+    gap: 1rem;
+  }
+
+  .kiel-shop-card__title,
+  .kiel-shop-layout .kiel-shop-card__body h3 {
+    min-height: auto;
+  }
+
+  .kiel-shop-card__desc,
+  .kiel-shop-layout .kiel-shop-card__desc {
+    min-height: auto;
+  }
+
+  .kiel-shop-pagination {
+    margin-top: 1.5rem;
+  }
+
+  .kiel-shop-pagination .kiel-pagination {
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .kiel-shop-pagination .kiel-pagination__list {
+    max-width: 100%;
+    border-radius: 1rem;
+    padding: 0.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .kiel-shop-filters-panel {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .kiel-shop-filters-panel__summary {
+    display: none;
+  }
+
+  .kiel-shop-filters-panel__inner {
+    display: block;
+    padding: 0;
+    border: none;
+  }
+
+  .kiel-shop-sidebar__title {
+    display: block;
+  }
+}
+
+@media (max-width: 991px) {
+  .kiel-shop-sidebar__title {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .kiel-shop-page .kiel-subhero__title {
+    max-width: none;
+    font-size: clamp(1.45rem, 6.5vw, 1.85rem);
+  }
+
+  .kiel-shop-page .kiel-subhero__lead {
+    font-size: 14px;
+    max-width: none;
+  }
+
+  .kiel-shop-layout .kiel-shop-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .kiel-shop-layout .kiel-shop-card__body {
+    padding: 0.75rem 0.65rem 0.85rem;
+  }
+
+  .kiel-shop-layout .kiel-shop-card__foot {
+    padding: 0 0.65rem 0.85rem;
+  }
+
+  .kiel-shop-layout .kiel-shop-card__body h3,
+  .kiel-shop-card__title {
+    font-size: 0.88rem;
+  }
+
+  .kiel-shop-layout .kiel-shop-card__prices strong {
+    font-size: 0.95rem;
+  }
+
+  .kiel-shop-layout .kiel-shop-card__foot button {
+    padding: 0.55rem 0.65rem;
+    font-size: 9px;
+  }
+
+  .kiel-shop-layout .kiel-shop-card__detail {
+    font-size: 10px;
+  }
+
+  .kiel-shop-result-count {
+    font-size: 13px;
+  }
+
+  .kiel-shop-filter-group ul {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+    gap: 0.5rem;
+    padding-bottom: 0.35rem;
+    scrollbar-width: none;
+  }
+
+  .kiel-shop-filter-group ul::-webkit-scrollbar {
+    display: none;
+    height: 0;
+  }
+
+  .kiel-shop-filter-group ul li {
+    flex: 0 0 auto;
+  }
+
+  .kiel-shop-filter-group ul a {
+    display: inline-block;
+    padding: 0.4rem 0.75rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(216, 193, 195, 0.55);
+    background: #fff8f6;
+    white-space: nowrap;
+  }
+
+  .kiel-shop-filter-group ul a.is-active {
+    background: #2c000a;
+    border-color: #2c000a;
+    color: #ffdea4;
+  }
+}
+
+@media (max-width: 359px) {
+  .kiel-shop-layout .kiel-shop-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
 .kiel-shop-layout {
   display: grid;
   grid-template-columns: 1fr;
@@ -442,7 +696,7 @@
   text-transform: uppercase;
 }
 .kiel-order-status--pending { background: #fff8f6; color: #74313d; border: 1px solid rgba(116, 49, 61, 0.25); }
-.kiel-order-status--progress { background: #cce8cd; color: #1e4d22; }
+.kiel-order-status--progress { background: #cce8cd; color: #318135; }
 .kiel-order-status--ok { background: #318135; color: #fff; }
 .kiel-order-status--muted { background: #ede0db; color: #534344; }
 .kiel-drawer__summary {
@@ -1177,7 +1431,7 @@
   color: #fff;
 }
 .kiel-pdp__btn--secondary:hover {
-  background: #1e4d22;
+  background: #318135;
 }
 .kiel-pdp__meta {
   margin: 0;
@@ -1424,7 +1678,7 @@
   margin-bottom: 1rem;
   border-radius: 0.5rem;
   background: rgba(49, 129, 53, 0.15);
-  color: #1e4d22;
+  color: #318135;
   font-size: 14px;
 }
 .kiel-pdp-reviews__auth,

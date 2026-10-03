@@ -78,6 +78,29 @@ class CmsBlockSeeder extends Seeder
                 ['num' => '4', 'label' => 'Domaines d’intervention KIEL'],
                 ['num' => '1', 'label' => 'Brevet d’invention · innovation locale'],
             ],
+            'home.testimonials.eyebrow' => 'Retour d\'expérience directe',
+            'home.testimonials.title' => 'Adoré à Cotonou, Parakou, Paris & Abidjan',
+            'home.testimonials.lead' => 'Retours de clientes et clients sur la boutique KIEL : qualité, traçabilité et service.',
+            'home.testimonials.items' => [
+                [
+                    'quote' => '« L\'huile pure de baobab KIEL a transformé l\'élasticité de ma peau en 2 semaines. Texture légère, parfum discret, traçabilité rassurante. »',
+                    'name' => 'Amina Agossa',
+                    'meta' => 'Esthéticienne · Cotonou, Bénin',
+                    'photo' => '',
+                ],
+                [
+                    'quote' => '« La super-pulpe est incomparable par rapport à ce qu\'on trouve ailleurs. Mon fils adore les smoothies et je sais d\'où vient chaque sachet. »',
+                    'name' => 'Marc Dubois',
+                    'meta' => 'Consultant nutrition · Paris, France',
+                    'photo' => '',
+                ],
+                [
+                    'quote' => '« La livraison à Parakou a été rapide et le suivi très clair. Service impeccable pour une marque locale que je recommande. »',
+                    'name' => 'Fatou Kébé',
+                    'meta' => 'Commerçante · Abidjan, Côte d\'Ivoire',
+                    'photo' => '',
+                ],
+            ],
             'home.faq.title' => 'Questions fréquentes',
             'home.faq.lead' => 'Baobab, commandes, livraison et engagements KIEL Industries.',
             'home.faq.items' => [
@@ -124,7 +147,7 @@ class CmsBlockSeeder extends Seeder
             'about.team.title' => 'Des talents au cœur de la filière',
             'about.team.lead' => 'Direction et équipes de terrain à Parakou, au service de la filière baobab.',
             'about.team.members' => [
-                ['first_name' => 'Célia', 'last_name' => 'Chabi', 'role' => 'Présidente directrice générale', 'photo' => 'assets/img/ressources/directrice.jpeg'],
+                ['first_name' => 'Célia', 'last_name' => 'CHABI', 'role' => 'Présidente directrice générale', 'photo' => 'assets/img/ressources/directrice.jpeg'],
             ],
             'about.faq.title' => 'Questions sur KIEL INDUSTRIES',
             'about.faq.lead' => 'Filière baobab, impact social, boutique et partenariats : les réponses essentielles.',
@@ -136,7 +159,7 @@ class CmsBlockSeeder extends Seeder
             ],
             'about.director.title' => 'Une filière baobab guidée par la preuve et le terrain',
             'about.director.quote' => '«&nbsp;Nous ne prélevons pas la nature : nous célébrons une alliance entre le savoir ancestral du Borgou et l’ingénierie verte. Chaque lot est une promesse de transparence pour nos clientes, nos partenaires et les femmes qui portent la filière.&nbsp;»',
-            'about.director.name' => 'Célia Chabi',
+            'about.director.name' => 'Célia CHABI',
             'about.director.role' => 'Présidente directrice générale · KIEL INDUSTRIES',
             'about.director.image' => 'assets/img/ressources/directrice.jpeg',
             'about.zero.title' => '100&nbsp;% de la gousse valorisée, zéro brûlis, zéro perte.',

@@ -1,0 +1,51 @@
+/**
+ * Navigation desktop compacte (1024px–1535px) : pas de hamburger, liens secondaires masqués en HTML.
+ */
+@media (min-width: 1024px) and (max-width: 1535px) {
+  .nav-main a[data-path="actualites"] {
+    display: none !important;
+  }
+
+  .nav-main {
+    gap: 0.35rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+
+  .nav-main .nav-main-link,
+  .nav-main .nav-top-link {
+    font-size: 13px;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+  }
+
+  .nav-main .nav-top-link .material-symbols-outlined {
+    font-size: 15px !important;
+  }
+
+  .kiel-header-nav-row {
+    gap: 0.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .kiel-site-menu-toggle {
+    display: none !important;
+  }
+
+  .nav-main {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  .nav-main {
+    display: none !important;
+  }
+
+  .kiel-site-menu-toggle.lg\:hidden,
+  .kiel-site-menu-toggle {
+    display: inline-flex !important;
+    visibility: visible !important;
+  }
+}

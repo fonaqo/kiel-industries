@@ -7,3 +7,41 @@
 .header-nav-row {
   align-items: center;
 }
+
+:root {
+  --kiel-title-color: #5d0d1a;
+}
+
+/* Titres sur fond clair — bordeaux #5d0d1a (header, bandeaux foncés et text-primary hors titres : inchangés) */
+:is(h1, h2, h3, h4).text-primary,
+.font-headline-lg.text-primary,
+.font-headline-md.text-primary,
+.font-headline-sm.text-primary,
+.font-display-lg.text-primary,
+.kiel-section-head :is(h1, h2, h3),
+.kiel-section__title,
+.kiel-hero--cream .kiel-hero__title,
+.kiel-about-v2-title,
+.kiel-about-v2-title--wine,
+.kiel-about-title,
+.kiel-shop-card__title,
+.kiel-pdp__title,
+.kiel-pdp-related__title,
+.kiel-docs-card__title,
+.kiel-actu-featured__title,
+.kiel-actu-card__title,
+.kiel-astuces-hero__title,
+.kiel-astuces-player__title,
+.kiel-astuces-queue__title,
+.kiel-astuces-playlist__title,
+.kiel-auth-simple__title,
+.kiel-expertise-pole-section__title,
+.kiel-director-v5__title,
+.kiel-account-page-head__title,
+.kiel-account-dashboard__title,
+.kiel-profile-photo-card__title,
+.kiel-legal-prose :is(h1, h2, h3),
+.kiel-contact-v3-info-block > h2,
+.kiel-contact-v3-info h2 {
+  color: var(--kiel-title-color) !important;
+}

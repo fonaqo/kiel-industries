@@ -1,18 +1,21 @@
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
 <meta name="csrf-token" content="{{ csrf_token() }}"/>
 @include('layouts.partials.seo')
 <link rel="icon" type="image/png" href="{{ asset('assets/img/brand/favicon.png') }}"/>
 <link rel="apple-touch-icon" href="{{ asset('assets/img/brand/favicon.png') }}"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin/>
 <link rel="preload" href="{{ asset('assets/img/brand/logo-kiel.svg') }}" as="image" type="image/svg+xml"/>
 <link href="{{ asset('assets/css/core/kiel-loader.css') }}" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet"/>
 <link href="{{ asset('assets/css/core/kiel-site-styles.css') }}" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="{{ asset('assets/js/core/kiel-tailwind-config.js') }}"></script>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" as="style"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet"/></noscript>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" as="style"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet"/></noscript>
 <link href="{{ asset('assets/css/pages/kiel-pages.css') }}" rel="stylesheet"/>
 <link href="{{ asset('assets/css/core/kiel-theme-wine.css') }}" rel="stylesheet"/>
 <link href="{{ asset('assets/css/core/kiel-brand.css') }}" rel="stylesheet"/>
@@ -20,10 +23,18 @@
 <link href="{{ asset('assets/css/shop/kiel-shop.css') }}" rel="stylesheet"/>
 <link href="{{ asset('assets/css/core/kiel-pagination.css') }}" rel="stylesheet"/>
 <link href="{{ asset('assets/css/core/kiel-mobile.css') }}" rel="stylesheet"/>
+@if(in_array($page ?? '', ['accueil', 'a-propos'], true))
 <link href="{{ asset('assets/css/core/kiel-filigrane-laptop.css') }}" rel="stylesheet"/>
+@endif
 <link href="{{ asset('assets/css/core/kiel-layout.css') }}" rel="stylesheet"/>
 <link href="{{ asset('assets/css/core/kiel-logos.css') }}" rel="stylesheet"/>
 <link href="{{ asset('assets/css/core/kiel-scrollbar.css') }}" rel="stylesheet"/>
+<link href="{{ asset('assets/css/core/kiel-responsive.css') }}" rel="stylesheet"/>
+<link href="{{ asset('assets/css/core/kiel-mobile-nav.css') }}" rel="stylesheet"/>
+<link href="{{ asset('assets/css/core/kiel-header-nav-compact.css') }}" rel="stylesheet"/>
+<link href="{{ asset('assets/css/core/kiel-header-mobile-tablet.css') }}" rel="stylesheet"/>
+<link href="{{ asset('assets/css/core/kiel-mobile-global.css') }}" rel="stylesheet"/>
+<link href="{{ asset('assets/css/core/kiel-perf.css') }}" rel="stylesheet"/>
 @if(($page ?? '') === 'accueil')
 <link href="{{ asset('assets/css/core/kiel-hero-orbit-logo.css') }}" rel="stylesheet"/>
 <link href="{{ asset('assets/css/core/kiel-baobab-hub-title.css') }}" rel="stylesheet"/>

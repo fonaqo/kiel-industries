@@ -33,6 +33,10 @@ html:has(body.kiel-drawer-open) {
 
 body > main.w-full {
   padding-top: var(--kiel-header-clearance) !important;
+  box-sizing: border-box;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
 }
 
 #hero-section .hero-orbit-spin-group text {

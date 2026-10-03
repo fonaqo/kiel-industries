@@ -16,7 +16,13 @@
 <section class="kiel-section kiel-section--content">
 <div class="kiel-wrap kiel-shop-layout" id="kiel-shop-live">
 <aside class="kiel-shop-sidebar">
-<h3>Recherche & filtres</h3>
+<details class="kiel-shop-filters-panel" open>
+<summary class="kiel-shop-filters-panel__summary">
+<span>Recherche &amp; filtres</span>
+<span class="material-symbols-outlined kiel-shop-filters-panel__chevron" aria-hidden="true">expand_more</span>
+</summary>
+<div class="kiel-shop-filters-panel__inner">
+<h3 class="kiel-shop-sidebar__title">Recherche &amp; filtres</h3>
 <form class="kiel-shop-search" method="get" action="{{ route('boutique') }}">
 <label class="sr-only" for="shop-q">Rechercher</label>
 <input id="shop-q" type="search" name="q" value="{{ $filters['q'] ?? '' }}" placeholder="Nom, description…"/>
@@ -49,6 +55,8 @@
 <button type="submit" class="kiel-shop-filter-submit">Appliquer</button>
 <a class="kiel-shop-filter-reset" href="{{ route('boutique') }}">Réinitialiser</a>
 </form>
+</div>
+</details>
 </aside>
 <div id="kiel-shop-results">
 @include('partials.boutique-results', compact('products', 'filters', 'categories'))

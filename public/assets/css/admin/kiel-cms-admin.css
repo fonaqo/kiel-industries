@@ -1010,7 +1010,7 @@
 
 .kiel-order-status--progress {
   background: #cce8cd;
-  color: #1e4d22;
+  color: #318135;
 }
 
 .kiel-order-status--ok {
@@ -1829,7 +1829,7 @@
   margin: 0 0 0.35rem;
   font-size: 13px;
   font-weight: 800;
-  color: #1e4d22;
+  color: #318135;
 }
 
 .kiel-cms-seo-panel__hint {

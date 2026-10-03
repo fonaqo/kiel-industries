@@ -15,9 +15,9 @@ return [
     ],
     'seo' => [
         'site_name' => 'KIEL INDUSTRIES',
-        'default_title' => 'KIEL INDUSTRIES',
-        'default_description' => 'KIEL INDUSTRIES, entreprise béninoise à Parakou : restauration des paysages par le baobab, marque KIEL, économie circulaire, conseil nutritionnel, projets et mentorat. Boutique en ligne.',
-        'default_keywords' => 'KIEL INDUSTRIES, baobab, Parakou, Borgou, Bénin, nutrition, cosmétique, huile baobab, poudre pulpe, économie circulaire, OAPI, boutique en ligne, FCFA, super-aliment, femmes rurales',
+        'default_title' => 'KIEL INDUSTRIES — baobab & boutique au Bénin',
+        'default_description' => 'KIEL INDUSTRIES (KIEL) à Parakou : filière baobab au Borgou — huile, poudre, nutrition, cosmétique naturelle, transformation locale et boutique en ligne. Économie circulaire et impact social.',
+        'default_keywords' => 'KIEL, KIEL INDUSTRIES, Kiel Industries, baobab, baobab Bénin, baobab Parakou, huile baobab, poudre baobab, boutique baobab, super-aliment baobab, Borgou, Parakou, nutrition, cosmétique naturelle, économie circulaire, OAPI, femmes rurales, FCFA',
         'default_image' => 'assets/img/sections/about/about-1.jpg',
         'locale' => 'fr_BJ',
         'geo' => [
@@ -41,15 +41,17 @@ return [
             ],
         ],
         'faq' => [
+            ['q' => 'Qu’est-ce que KIEL INDUSTRIES ?', 'a' => 'KIEL INDUSTRIES (KIEL) est une entreprise béninoise à Parakou qui valorise le baobab : transformation, marque KIEL, boutique en ligne et impact social au Borgou.'],
+            ['q' => 'Où acheter des produits de baobab KIEL ?', 'a' => 'Sur la boutique en ligne KIEL INDUSTRIES : huile, poudre de pulpe et feuilles, soins, artisanat — transformés à Parakou, prix en FCFA.'],
             ['q' => 'Où est située KIEL INDUSTRIES ?', 'a' => 'Siège et ateliers à Parakou, Borgou, Bénin.'],
-            ['q' => 'Quels produits propose KIEL ?', 'a' => 'Alimentation : poudres de feuilles et pulpe, café, whisky et biscuits de baobab. Cosmétiques : huile, baume et pommade. Artisanat : boucles d’oreilles et accessoires.'],
+            ['q' => 'Quels produits baobab propose KIEL ?', 'a' => 'Alimentation : poudres de feuilles et pulpe, café, whisky et biscuits de baobab. Cosmétiques : huile, baume et pommade. Artisanat : boucles d’oreilles et accessoires.'],
             ['q' => 'Livrez-vous au Bénin ?', 'a' => 'Oui, boutique en ligne avec livraison au Bénin et expédition internationale selon destination.'],
         ],
         'pages' => [
             'home' => [
-                'title' => 'Baobab, nutrition & cosmétique au Bénin',
-                'description' => 'Filière baobab intégrée à Parakou : boutique KIEL, super-aliments, soins dermo-botaniques et impact social au Borgou.',
-                'keywords' => 'baobab Bénin, KIEL Parakou, boutique baobab, nutrition afrique',
+                'title' => 'KIEL INDUSTRIES — baobab, boutique & filière au Bénin',
+                'description' => 'KIEL (KIEL INDUSTRIES) à Parakou : filière baobab intégrale, boutique en ligne, huile et poudre de baobab, nutrition et cosmétique naturelle au Borgou.',
+                'keywords' => 'KIEL INDUSTRIES, KIEL baobab, baobab Bénin, baobab Parakou, boutique KIEL, huile baobab, produits baobab',
                 'og_type' => 'website',
             ],
             'boutique' => [
@@ -223,7 +225,7 @@ return [
     'team' => [
         [
             'first_name' => 'Célia',
-            'last_name' => 'Chabi',
+            'last_name' => 'CHABI',
             'role' => 'Présidente directrice générale',
             'photo' => 'assets/img/ressources/directrice.jpeg',
         ],

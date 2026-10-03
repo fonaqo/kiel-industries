@@ -1,0 +1,108 @@
+/**
+ * Header tablette (768px–1023px). Mobile (<768px) : kiel-mobile-global.css (logo plus grand).
+ */
+@media (max-width: 1023px) {
+  :root {
+    --kiel-header-clearance: 11.25rem;
+  }
+
+  .kiel-site-topbar {
+    min-height: 3.15rem;
+    padding-top: 0.58rem;
+    padding-bottom: 0.58rem;
+    font-size: 14px;
+  }
+
+  .kiel-site-topbar__info a[href^="mailto:"] span {
+    font-size: 14px;
+    max-width: min(14.5rem, 62vw);
+  }
+
+  .kiel-site-topbar__info .kiel-ui-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  #currency-switch .currency-btn {
+    padding: 0.48rem 0.68rem !important;
+    font-size: 12px !important;
+  }
+
+  .header-nav-row.kiel-header-nav-row {
+    padding-top: 0.65rem;
+    padding-bottom: 0.65rem;
+    min-height: 4.35rem;
+    align-items: center;
+  }
+
+  .kiel-header-nav-tools,
+  .kiel-header-nav-row > div.flex.flex-shrink-0 {
+    gap: 0.45rem !important;
+  }
+
+  .kiel-header-nav-tools button,
+  .kiel-header-nav-tools .kiel-site-menu-toggle,
+  .kiel-header-nav-row > div.flex.flex-shrink-0 button,
+  .kiel-header-nav-row > div.flex.flex-shrink-0 .kiel-site-menu-toggle {
+    width: 2.75rem !important;
+    height: 2.75rem !important;
+    min-width: 2.75rem;
+    min-height: 2.75rem;
+  }
+
+  .kiel-header-nav-row .material-symbols-outlined {
+    font-size: 1.5rem !important;
+  }
+
+  .kiel-header-nav-row #wishlist-badge,
+  .kiel-header-nav-row #cart-badge {
+    min-width: 1.1rem;
+    height: 1.05rem;
+    font-size: 10px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  :root {
+    --kiel-header-clearance: 12rem;
+  }
+
+  .header-nav-row .kiel-header-logo {
+    height: 4.75rem !important;
+    max-width: min(15rem, 52vw) !important;
+  }
+
+  .header-nav-row > a[data-path="accueil"] {
+    flex-shrink: 1 !important;
+    max-width: min(52vw, 14rem) !important;
+    min-width: 0;
+  }
+
+  .kiel-site-topbar {
+    min-height: 3.35rem;
+  }
+
+  .header-nav-row.kiel-header-nav-row {
+    min-height: 4.75rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .kiel-header-nav-tools button,
+  .kiel-header-nav-tools .kiel-site-menu-toggle,
+  .kiel-header-nav-row > div.flex.flex-shrink-0 button,
+  .kiel-header-nav-row > div.flex.flex-shrink-0 .kiel-site-menu-toggle {
+    width: 2.85rem !important;
+    height: 2.85rem !important;
+  }
+
+  .kiel-header-nav-row .material-symbols-outlined {
+    font-size: 1.55rem !important;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --kiel-header-clearance: 11rem;
+  }
+}

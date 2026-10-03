@@ -12,6 +12,15 @@
     syncHeaderOffset();
     window.addEventListener('resize', syncHeaderOffset, { passive: true });
     window.addEventListener('load', syncHeaderOffset, { once: true });
+    window.addEventListener('orientationchange', () => {
+      requestAnimationFrame(syncHeaderOffset);
+    });
+    if ('ResizeObserver' in window) {
+      const header = document.querySelector('header.fixed');
+      if (header) {
+        new ResizeObserver(syncHeaderOffset).observe(header);
+      }
+    }
   }
 
   if (document.readyState === 'loading') {
